@@ -35,12 +35,12 @@
 # To get started, just fill in code where indicated. Best of luck!
 
 import random
+import numpy as np
 
 class HiddenMarkovModel:
     '''
     Class implementation of Hidden Markov Models.
     '''
-    
 
     def __init__(self, A, O):
         '''
@@ -82,16 +82,13 @@ class HiddenMarkovModel:
         self.O = O
         self.A_start = [1. / self.L for _ in range(self.L)]
 
-
     def viterbi(self, x):
         '''
         Uses the Viterbi algorithm to find the max probability state 
         sequence corresponding to a given input sequence.
-
         Arguments:
             x:          Input sequence in the form of a list of length M,
                         consisting of integers ranging from 0 to D - 1.
-
         Returns:
             max_seq:    State sequence corresponding to x with the highest
                         probability.
@@ -105,50 +102,34 @@ class HiddenMarkovModel:
         #
         # For instance, probs[1][0] is the probability of the prefix of
         # length 1 ending in state 0.
-        probs = [[0. for _ in range(self.L)] for _ in range(M + 1)] # (M+1) * L
-        seqs = [['' for _ in range(self.L)] for _ in range(M + 1)] # (M+1) * L
+        probs = [[0. for _ in range(self.L)] for _ in range(M + 1)]
+        seqs = [['' for _ in range(self.L)] for _ in range(M + 1)]
 
-        ###
-        ###
-        ### 
-        ### TODO: Insert Your Code Here (2A)
+        #start 
+        #compute the sequence
+        for word in range(0,M):
+            if(word == 0):
+                for i in range(self.L):
+                    probs[word+1][i] = self.A_start[i]*self.O[i][x[word]]
+            else:
+                for cur_type in range(self.L):
+                    max_value=0
+                    max_indx = 0
+                    for prev_type in range(self.L): #probs[]starts from 1, probs[word][] is the stored value of prev layer
+                        cur_value = probs[word][prev_type]*self.A[prev_type][cur_type]*self.O[cur_type][x[word]]
+                        if(cur_value>= max_value):
+                            max_value = cur_value
+                            max_indx = prev_type
+                    probs[word+1][cur_type] = max_value
+                    seqs[word+1][cur_type] = max_indx
+                if(word == M-1):
+                    max_v = max(probs[M])
+                    order = str(probs[M].index(max_v))
         
-        # start:
-        for i in range(self.L):
-            probs[1][i] = self.A_start[i] * self.O[i][x[0]]
-            
-        # Viterbi
-        for i in range(1, M): # x_j-1
-            for j in range(self.L): # y_j
-                max_prob = 0
-                max_pre = ''
-                for k in range(self.L): # y_j-1
-                    # P(y_1:j-1, x_1:j-1) * A(y_j-1, a) * O(a, x_j)
-                    curr_prob = probs[i][k] * self.A[k][j] * self.O[j][x[i]] 
-                    if curr_prob >= max_prob: # max prob
-                        max_prob = curr_prob
-                        max_pre = str(k)
-                probs[i+1][j] = max_prob
-                seqs[i+1][j] = max_pre
-        
-        max_M_prob = 0
-        max_M_pre = ''
-        # get max_prob with len(x) = M
-        for j in range(self.L):
-            curr_M_prob = probs[M][j]
-            if curr_M_prob >= max_M_prob:
-                max_M_prob = curr_M_prob
-                max_M_pre = str(j)
-        
-        max_rseq = max_M_pre
-        # get prefix from end to start
-        for l in range(M+1, 1, -1):
-            ind = int(max_rseq[-1]) # object state for the last
-            max_rseq += seqs[l-1][ind]
-        max_seq = max_rseq[::-1] # reverse for the final max_seq
-        ###
-        ###
-        ###
+        for word in range(M, 0, -1):
+            order += str(seqs[word][int(order[len(order)-1])])
+        #reverse the sequence
+        max_seq = order[::-1]
         return max_seq
 
 
@@ -178,37 +159,35 @@ class HiddenMarkovModel:
         '''
 
         M = len(x)      # Length of sequence.
-        alphas = [[0. for _ in range(self.L)] for _ in range(M + 1)] # (M+1) * L
+        alphas = [[0. for _ in range(self.L)] for _ in range(M + 1)]
 
         ###
         ###
         ### 
         ### TODO: Insert Your Code Here (2Bi)
-        
-        # start
-        for j in range(self.L):
-            alphas[1][j] = self.A_start[j] * self.O[j][x[0]]
-        
-        # calculate alpha
-        for i in range(1, M): # x_j-1
-            for j in range(self.L): # y_j
-                alpha = 0
-                for k in range(self.L): # y_j-1
-                    alpha += alphas[i][k] * self.A[k][j] * self.O[j][x[i]]
-                alphas[i+1][j] = alpha
-            if normalize:
-                sum_i = sum(alphas[i+1])
-                for l in range(self.L):
-                    alphas[i+1][l] /= sum_i 
+        ###
+        ###
+        ###
 
-#         if normalize: # 1:M
-#             for i in range(M):
-#                 sum_i = sum(alphas[i+1])
-#                 for l in range(self.L):
-#                     alphas[i+1][l] /= sum_i 
-        ###
-        ###
-        ###
+        
+        #computing forwarding
+        for word in range(0,M):
+            for cur_type in range(self.L):
+                p = 0
+                for prev_type in range(self.L):
+                    if(word == 0):
+                        alphas[word+1][prev_type] = self.A_start[prev_type]*self.O[prev_type][x[word]]
+                    else:
+                        p = p + alphas[word][prev_type]*self.A[prev_type][cur_type]*self.O[cur_type][x[word]]
+
+                if(word != 0):
+                    alphas[word+1][cur_type] = p
+            #normalize
+            if(normalize):
+                norm_sum = sum(alphas[word+1])
+                for norm_type in range(self.L):
+                    alphas[word+1][norm_type] = alphas[word+1][norm_type]/norm_sum
+
 
         return alphas
 
@@ -245,34 +224,30 @@ class HiddenMarkovModel:
         ###
         ### 
         ### TODO: Insert Your Code Here (2Bii)
-         # start
-        for j in range(self.L):
-            betas[-1][j] = 1
+        ###
+        ###
+        ###
+
+        #start
         
-        # calculate beta
-        for i in range(-1, -(M+1), -1): # x_j+1
-            for j in range(self.L): # y_j
-                beta = 0
-                for k in range(self.L): # y_j+1
-                    if i == -M:
-                        beta += betas[i][k] * self.A_start[k] * self.O[k][x[i]] # A_start
+        for word in range(0, -M-1, -1):
+            for cur_type in range(self.L):
+                p=0
+                for next_type in range(self.L):
+                    if(word == 0):
+                        betas[word-1][next_type] = 1
                     else:
-                        beta += betas[i][k] * self.A[j][k] * self.O[k][x[i]]
-                betas[i-1][j] = beta
-        
-            # normalize:
-            if normalize:
-                sum_i = sum(betas[i-1])
-                for l in range(self.L):
-                    betas[i-1][l] /= sum_i 
-#         if normalize:
-#             for i in range(0, -(M+1), -1): # -1:(-(M+1))
-#                 sum_i = sum(betas[i-1])
-#                 for l in range(self.L):
-#                     betas[i-1][l] /= sum_i 
-        ###
-        ###
-        ###
+                        if (word !=-M):
+                            p = p + betas[word][next_type] * self.A[cur_type][next_type] * self.O[next_type][x[word]]
+                        else:
+                            p = p + betas[word][next_type] * self.A_start[next_type] * self.O[next_type][x[word]]
+                if(word != 0):
+                    betas[word-1][cur_type] = p
+            if(normalize):
+                norm_sum = sum(betas[word-1])
+                for norm_type in range(self.L):
+                    betas[word-1][norm_type] /= norm_sum
+
 
         return betas
 
@@ -299,50 +274,35 @@ class HiddenMarkovModel:
         '''
 
         # Calculate each element of A using the M-step formulas.
-
-        ###
-        ###
-        ### 
-        ### TODO: Insert Your Code Here (2C)
-        N = len(Y)
-        A_ab = [[0. for _ in range(self.L)] for _ in range(self.L)] # stores count of y_i(j) = b and y_i(j-1) = a
-        A_a = [0. for _ in range(self.L)] # stores count of y_i(j-1) = a
         
-        for i in range(N):
-            for j in range(1, len(Y[i])):
-                A_ab[Y[i][j-1]][Y[i][j]] += 1
-                A_a[Y[i][j-1]] += 1
-                
-        for a in range(self.L):
-            for b in range(self.L):
-                self.A[a][b] = A_ab[a][b] / A_a[a]
-        ###
-        ###
-        ###
+        for cur_type in range(self.L):
+            for next_type in range(self.L):
+                den_count=0
+                num_count=0
+                for y in Y:
+                    for i in range(len(y)-1):
+                        if(y[i]==cur_type and y[i+1]==next_type):
+                            num_count += 1
+                        if(y[i]==cur_type):
+                            den_count += 1
+                self.A[cur_type][next_type] = num_count/den_count
+
+
 
         # Calculate each element of O using the M-step formulas.
-        O_wa = [[0. for _ in range(self.D)] for _ in range(self.L)]
-        O_a = [0. for _ in range(self.L)]
-        
+
         for w in range(self.D):
-            for a in range(self.L):
-                for i in range(N):
+            for z in range(self.L):
+                num_count=0
+                den_count=0
+                for i in range(len(X)):
                     for j in range(len(X[i])):
-                        if Y[i][j] == a:
-                            O_a[a] += 1
-                            if X[i][j] == w:
-                                O_wa[a][w] += 1                    
-        for w in range(self.D):
-            for a in range(self.L):
-                self.O[a][w] = O_wa[a][w] / O_a[a]
-        ###
-        ###
-        ### 
-        ### TODO: Insert Your Code Here (2C)
-        
-        ###
-        ###
-        ###
+                        if(X[i][j]==w and Y[i][j]==z):
+                            num_count+=1
+                        if(Y[i][j]==z):
+                            den_count+=1
+                self.O[z][w] = num_count/den_count
+
 
         pass
 
@@ -353,132 +313,95 @@ class HiddenMarkovModel:
         datset X. Note that this method does not return anything, but
         instead updates the attributes of the HMM object.
 
-        Arguments:
-            X:          A dataset consisting of input sequences in the form
-                        of lists of length M, consisting of integers ranging
-                        from 0 to D - 1. In other words, a list of lists.
+            Arguments:
+                X:          A dataset consisting of input sequences in the form
+                            of lists of length M, consisting of integers ranging
+                            from 0 to D - 1. In other words, a list of lists.
 
-            N_iters:    The number of iterations to train on.
+                N_iters:    The number of iterations to train on.
         '''
+        for iterations in range(N_iters):
+            #copy A and O
+            #print(iterations)
+            A_num = np.zeros((self.L, self.L))
+            A_den = np.zeros((self.L,1))
+            O_num = np.zeros((self.L, self.D))
+            O_den = np.zeros((self.L,1))
 
-        ###
-        ###
-        ### 
-        ### TODO: Insert Your Code Here (2D)
-        
-        iter = 0
-        while iter < N_iters: # iter for N_iters
-            # initialization
-            A_ab = [[0. for i in range(self.L)] for j in range(self.L)]
-            A_a = [0. for i in range(self.L)]
-            O_wa = [[0. for i in range(self.D)] for j in range(self.L)]
-            O_a = [0. for i in range(self.L)]
+            for x in X:
+                alphas = self.forward(x, normalize=True)
+                betas = self.backward(x, normalize=True)
+                M = len(x)
+
+                for word in range(1, M):
+                    temp_top = [[0. for _ in range(self.L)] for _ in range(self.L)]
+                    for cur_type in range(self.L):
+                        for next_type in range(self.L):
+                            temp_top[cur_type][next_type] = alphas[word][cur_type]*self.A[cur_type][next_type]*self.O[next_type][x[word]]*betas[word+1][next_type]
+
+                    norm = sum(sum(temp_top, []))
+
+                    for cur_type in range(self.L):
+                        for next_type in range(self.L):
+                            temp_top[cur_type][next_type] /= norm
+                            A_num[cur_type][next_type] += temp_top[cur_type][next_type]
+
+                for word in range(1, M+1):
+                    temp_down = [0. for _ in range(self.L)]
+
+                    for norm_type in range(self.L):
+                        temp_down[norm_type] = alphas[word][norm_type]*betas[word][norm_type]
+
+                    norm = sum(temp_down)
+
+                    for cur_type in range(self.L):
+                        temp_down[cur_type] /= norm
+                        O_den[cur_type] += temp_down[cur_type]
+                        O_num[cur_type][x[word-1]] += temp_down[cur_type]
+                        if (word != M):
+                            A_den[cur_type] += temp_down[cur_type]
+
+            self.A = np.divide(A_num,A_den)
+            self.O = np.divide(O_num, O_den)
+
             
-            # E-step
-            for x in X: # loop through N samples, sample i 
-                length = len(x) # length of sequence of sample i
-                
-                alphas = self.forward(x, normalize=True) # alphas
-                betas = self.backward(x, normalize=True) # betas
-                
-                # P(y_j=a, x)
-                for j in range(1, length+1):
-                    tmp_j_x = [0. for _ in range(self.L)]
-                    
-                    for k in range(self.L):
-                        tmp_j_x[k] = alphas[j][k] * betas[j][k] 
-                    
-                    sum_tmp_1 = sum(tmp_j_x)
-                    # print(sum_tmp_1)
-                    for l in range(self.L):
-                        tmp_j_x[l] /= sum_tmp_1
-                        O_a[l] += tmp_j_x[l]
-                        O_wa[l][x[j-1]] += tmp_j_x[l] # j-1?
-                        if j != length:
-                            A_a[l] += tmp_j_x[l] # y_i_j-1
 
 
-                # P(y_j=a, y_j+1=b, x)
-                for m in range(1, length):
-                    tmp_j_jp1_x = [[0. for _ in range(self.L)] for _ in range(self.L)]
-                    for a in range(self.L): # y_j
-                        for b in range(self.L): # y_j+1
-                            tmp_j_jp1_x[a][b] = alphas[m][a] * self.O[b][x[m]] * self.A[a][b] * betas[m+1][b] # self.O[b][x[m+1]]?
-                    
-                    sum_tmp_2 = sum(sum(tmp_j_jp1_x, []))
-                    
-                    # P(y_j=a, y_j+1=b, x)
-                    for a in range(self.L):
-                        for b in range(self.L):
-                            tmp_j_jp1_x[a][b] /= sum_tmp_2
-                            A_ab[a][b] += tmp_j_jp1_x[a][b]
 
-            # M-step
-            for a in range(self.L):
-                for b in range(self.L):
-                    self.A[a][b] = A_ab[a][b] / A_a[a]
-
-            for a in range(self.L):
-                for w in range(self.D):
-                    self.O[a][w] = O_wa[a][w] / O_a[a]
-            
-            iter += 1 
-        ###
-        ###
-        ###
 
         pass
+
 
 
     def generate_emission(self, M):
         '''
         Generates an emission of length M, assuming that the starting state
         is chosen uniformly at random. 
-
         Arguments:
             M:          Length of the emission to generate.
-
         Returns:
             emission:   The randomly generated emission as a list.
-
             states:     The randomly generated states as a list.
         '''
 
         emission = []
         states = []
-        #random.seed(2019)
-        ###
-        ###
-        ### 
-        ### TODO: Insert Your Code Here (2F)
-        starting_state = random.randrange(0, self.L, 1)
-        #print("starting_state = ", starting_state)
-        states.append(starting_state)
-        for i in range(M):
-            
-            rnd_o = random.uniform(0,1)
-            next_obs = 0
-            while rnd_o > 0:
-                rnd_o -= self.O[states[i]][next_obs]
-                next_obs += 1
-            next_obs -= 1
-            emission.append(next_obs) 
-            
-            rnd_s = random.uniform(0,1)
-            curr_state = states[i]
-            next_state = 0
-            
-            while rnd_s > 0:
-                rnd_s -= self.A[states[i]][next_state]
-                next_state += 1
-            next_state -= 1
-            states.append(next_state)
         
-        ###
-        ###
-        ###
+        # Starting state is chosen uniformly at random
+        starting_state = random.choice(range(self.L))
+        states.append(starting_state)
 
-        return emission, states[:-1]
+        for word in range(M):
+            
+            # Sample next observation.
+
+            emission.append(np.random.choice(range(self.D), p = self.O[states[word]]))
+
+            # Sample next state.
+            states.append(np.random.choice(range(self.L), p = self.A[states[word]]))
+        states = states[:-1]
+
+        return emission, states
 
 
     def probability_alphas(self, x):
@@ -600,8 +523,9 @@ def unsupervised_HMM(X, n_states, N_iters):
         
         N_iters:    The number of iterations to train on.
     '''
-    random.seed(2019)
+
     # Make a set of observations.
+    random.seed(2019)
     observations = set()
     for x in X:
         observations |= set(x)
