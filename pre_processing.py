@@ -1,9 +1,10 @@
 # load in files
 import numpy as np
 import sys
-from nltk.tokenize import sent_tokenize, word_tokenize
 import nltk
 nltk.download('punkt')
+from nltk.tokenize import sent_tokenize, word_tokenize, wordpunct_tokenize
+
 
 def load_shakespeare(filename):
     '''
@@ -62,9 +63,10 @@ def lower_case(list_of_strings):
 # two ways: one keeps the punctions, one doesn't.
 def pre_tokenize(poems):
     result = []
-    puncs = '\'!()[]{};:"\\,<>./?@#$%^&*_~'
+    #puncs = '\'!()[]{};:"\\,<>./?@#$%^&*_~'
     for poem in poems:
         tokens_nltk = word_tokenize(poem)
+        #tokens_nltk = wordpunct_tokenize(poem)
         has_s = False    
         #print("tokens_nltk = ", tokens_nltk)
         
@@ -77,18 +79,22 @@ def pre_tokenize(poems):
     return result
 
 def remove_punc(result):
-    puncs = '\'!()[]{};:"\\,<>./?@#$%^&*_~'
+    puncs = list('\'!()[]{};:"\\,<>./?@#$%^&*_~')
+    new_result = []
     for peom_tokens in result:
+        tmp = []
         for token in peom_tokens:
-            if token in puncs:
-                peom_tokens.remove(token)
-    return result
+            if token not in puncs:
+                tmp.append(token)
+        new_result.append(tmp)
+    return new_result
 
 # encode word
 def encode(data):
     '''
     encode word for input for HMM
     '''
+    puncs = list('\'!()[]{};:"\\,<>./?@#$%^&*_~')
     index = 0
     obs = []
     obs_map = {}
@@ -100,16 +106,37 @@ def encode(data):
                 index += 1
             curr_line.append(obs_map[word])
         obs.append(curr_line)
+
+    for key, value in obs_map.items():
+        if key in puncs:
+            print("*********************** Warning ***********************")
+            print("There is still punctions in the obs_map!!!")
+            print("The punction is: ", key)
+            print("Is this punction in puncs? ", key in puncs)
+            print("*********************** Warning End ***********************")
     return obs, obs_map
 
-def pre_processing_res(filename):
+def pre_processing_poems(filename):
     # read in poems
+    count = 0
+    puncs = list('\'!()[]{};:"\\,<>./?@#$%^&*_~')
     poems_origin = load_shakespeare(filename)
     poems = lower_case(poems_origin)
     # tokenize without puncs
     with_puncs_tokens = pre_tokenize(poems)
+    #print("with_puncs_tokens:")
+    #print(with_puncs_tokens)
     no_puncs_tokens = remove_punc(with_puncs_tokens)
-
+    for no_puncs_token in no_puncs_tokens:
+        for item in no_puncs_token:
+            if item in puncs:
+                count += 1
+                print("*********************** Warning ***********************")
+                print("There is still punctions in pre_processing_poems-no_puncs_tokens!")
+                print("The punction is: ", item)
+                print("Is this punction in puncs? ", item in puncs)
+                print("*********************** Warning End ***********************")
+    print("count = ", count)
     obs, obs_map = encode(no_puncs_tokens)
     # print("********************* obs *********************")
     # print(obs[0])
@@ -117,8 +144,29 @@ def pre_processing_res(filename):
     # print(obs_map)
     return obs, obs_map
 
+def pre_processing_sentences(filename):
+    count = 0
+    puncs = list('\'!()[]{};:"\\,<>./?@#$%^&*_~') 
+    sentences_origin = load_shakespeare_sentences(filename)
+    sentences = lower_case(sentences_origin)
+    with_puncs_tokens = pre_tokenize(sentences)
+    no_puncs_tokens = remove_punc(with_puncs_tokens)
+    for no_puncs_token in no_puncs_tokens:
+        for item in no_puncs_token:
+            if item in puncs:
+                count += 1
+                print("*********************** Warning ***********************")
+                print("There is still punctions in pre_processing_sentences-no_puncs_tokens!")
+                print("The punction is: ", item)
+                print("Is this punction in puncs? ", item in puncs)
+                print("*********************** Warning End ***********************")
+    obs, obs_map = encode(no_puncs_tokens)
+    print("count = ", count)
+    return obs, obs_map
+
 
 if __name__ == '__main__':
     filename = "./project3/data/shakespeare.txt"
-    obs, obs_map = pre_processing_res()
-    print(obs_map)
+    obs_p, obs_map_p = pre_processing_poems(filename)
+    #obs_s, obs_map_s = pre_processing_sentences(filename)
+    #print(obs_map_s)

@@ -124,8 +124,11 @@ def sample_sentence(hmm, obs_map, n_words=100):
     # Sample and convert sentence.
     emission, states = hmm.generate_emission(n_words)
     sentence = [obs_map_r[i] for i in emission]
-
-    return ' '.join(sentence).capitalize() + '...'
+    
+    # Yu modified here to save generated_sentence
+    generated_sentence = ' '.join(sentence)
+    return generated_sentence
+    #return ' '.join(sentence).capitalize() + '...'
 
 
 ####################
