@@ -53,6 +53,37 @@ def load_shakespeare_sentences(filename):
                 count += 1
     return sentences 
 
+
+def load_shakespeare_sentences_reverse(filename):
+    '''
+    input: filename
+    output: list of strings, each string is a reversed sentence. (no end puncs)
+    '''
+    rev_sentences = []
+    #count = 0
+    with open(filename, 'r') as f:
+        for line in f.readlines():
+            line = line.strip()
+            new_line = ""
+            if len(line) == 0: # empty line
+                continue
+            elif line.isdigit(): # peom number
+                #print("# of peom = ", int(line)-1, ", count = ", count)
+                #count = 0
+                continue
+            else: # sentence
+                if line[-1].isalpha():
+                    words = line.split(" ")
+                    rev_words = [words[i] for i in range(len(words)-1, -1, -1)] # reverse
+                    new_line = " ".join(rev_words)
+                else:
+                    words = line[:-1].split(" ")
+                    rev_words = [words[i] for i in range(len(words)-1, -1, -1)]
+                    new_line = " ".join(rev_words)
+            rev_sentences.append(new_line)
+                #count += 1
+    return rev_sentences 
+
 def lower_case(list_of_strings):
     new_list = []
     for string in list_of_strings:
@@ -161,9 +192,28 @@ def pre_processing_sentences(filename):
                 print("Is this punction in puncs? ", item in puncs)
                 print("*********************** Warning End ***********************")
     obs, obs_map = encode(no_puncs_tokens)
-    print("count = ", count)
+    print("count of puncs = ", count)
     return obs, obs_map
 
+def pre_processing_sentences_reverse(filename):
+    count = 0
+    puncs = list('\'!()[]{};:"\\,<>./?@#$%^&*_~') 
+    rev_sentences_origin = load_shakespeare_sentences_reverse(filename)
+    rev_sentences = lower_case(rev_sentences_origin)
+    with_puncs_tokens = pre_tokenize(rev_sentences)
+    no_puncs_tokens = remove_punc(with_puncs_tokens)
+    for no_puncs_token in no_puncs_tokens:
+        for item in no_puncs_token:
+            if item in puncs:
+                count += 1
+                print("*********************** Warning ***********************")
+                print("There is still punctions in pre_processing_sentences-no_puncs_tokens!")
+                print("The punction is: ", item)
+                print("Is this punction in puncs? ", item in puncs)
+                print("*********************** Warning End ***********************")
+    rev_obs, rev_obs_map = encode(no_puncs_tokens)
+    print("count of puncs = ", count)
+    return rev_obs, rev_obs_map
 
 if __name__ == '__main__':
     filename = "./project3/data/shakespeare.txt"
