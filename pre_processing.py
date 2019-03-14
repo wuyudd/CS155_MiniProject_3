@@ -90,6 +90,24 @@ def lower_case(list_of_strings):
         new_list.append(string.lower())
     return new_list
 
+def pre_tokenize_full(poems):
+    #return list of string
+    # result = []
+    #puncs = '\'!()[]{};:"\\,<>./?@#$%^&*_~'
+    # for poem in poems:
+    tokens_nltk = word_tokenize(poems)
+    #tokens_nltk = wordpunct_tokenize(poem)
+    has_s = False    
+    #print("tokens_nltk = ", tokens_nltk)
+    
+    for i in range(len(tokens_nltk)):
+        if tokens_nltk[i] == "'s":
+            tokens_nltk[i-1] += "'s"
+    if "'s" in tokens_nltk:
+        tokens_nltk = list(filter(lambda a: a != "'s", tokens_nltk))
+    # result.append(tokens_nltk)
+    return tokens_nltk
+
 # tokenize
 # two ways: one keeps the punctions, one doesn't.
 def pre_tokenize(poems):
