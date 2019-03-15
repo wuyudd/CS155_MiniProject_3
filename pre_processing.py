@@ -233,6 +233,93 @@ def pre_processing_sentences_reverse(filename):
     print("count of puncs = ", count)
     return rev_obs, rev_obs_map
 
+# for hmm
+def generate_rhyme(model, rhyme_dict, syllable_dict, syllable_end_dict, obs_map_p):
+    poem = []
+    non_dup = set()
+    count = 0
+    while count < 7:
+        sentence1 = sample_sentence(model, obs_map_p, n_words=10)
+        words1 = sentence1.split(" ")
+        if (words1[0] in rhyme_dict) and (words1[0] not in non_dup):
+            valid1, valid_sentence1 = exact_ten_syllables(words1, syllable_dict, syllable_end_dict)
+            while valid1:
+                sentence2 = sample_sentence(model, obs_map_p, n_words=10)
+                words2 = sentence2.split(" ")
+#                 print("========:", words1, words2)
+                if (words2[0] in rhyme_dict[words1[0]]) and (words2[0] not in non_dup):
+                    valid2, valid_sentence2 = exact_ten_syllables(words2, syllable_dict, syllable_end_dict)
+                    if valid2:
+                        poem.append(valid_sentence1)
+                        poem.append(valid_sentence2)
+                        non_dup.add(words1[0])
+                        non_dup.add(words2[0])
+                        count += 1
+                        break
+    
+    for i in range(14):
+        poem[i] = reverse(poem[i])
+    
+    poem_output = poem[0] +","+ poem[2] +","+ poem[1] +","+ poem[3] +","+ poem[4] +","+ poem[6] +","+ poem[5] +","+ poem[7] + ","+ \
+                  poem[8] +","+ poem[10] +","+ poem[9] +","+ poem[11] +","+ poem[12] +","+ poem[13] +"."
+    return poem_output
+
+def reverse(sentence):
+    words = sentence.split(" ")
+    left = 0
+    right = len(words)-1
+    
+    while left < right:
+        temp = words[left]
+        words[left] = words[right]
+        words[right] = temp
+        left += 1
+        right -= 1
+    
+    sentence_reversed = " ".join(words)
+    return sentence_reversed
+
+def exact_ten_syllables(words, syllable_dict, syllable_end_dict):
+    count = 0
+    valid_words = []
+    valid = False
+    for word in words:
+        curr_syllable_max = 0
+        curr_syllable_min = 0
+        
+        if word in syllable_end_dict:
+            if count + syllable_end_dict[word] == 10:
+                valid_words.append(word)
+                valid = True
+                break
+        
+        if len(syllable_dict[word]) == 0:
+            break
+        elif len(syllable_dict[word]) == 1:
+            curr_syllable_len = syllable_dict[word][0]
+        else:
+            print(len(syllable_dict[word]))
+            rnd_idx = random.randint(0, len(syllable_dict[word])-1)
+            curr_syllable_len = syllable_dict[word][rnd_idx]
+        
+        count += curr_syllable_len
+        if count < 10:
+            valid_words.append(word)
+        elif count == 10:
+                valid_words.append(word)
+                valid = True
+                break
+        else:
+            valid = False
+    
+    valid_sentence = ""
+    if valid:
+        for word in valid_words:
+            valid_sentence += word + " "
+    
+    return valid, valid_sentence.strip()
+
+
 if __name__ == '__main__':
     filename = "./project3/data/shakespeare.txt"
     obs_p, obs_map_p = pre_processing_poems(filename)
