@@ -10,9 +10,7 @@ from nltk.tokenize import sent_tokenize, word_tokenize, wordpunct_tokenize
 
 from HMM_helper import *
 from HMM import *
-from build_rhyme_dict import *
 from syllable_dictionary import *
-from pre_processing import *
 from split_poem import *
 
 def load_shakespeare(filename):
@@ -373,6 +371,57 @@ def generate_rhyme(model, rhyme_dict, syllable_dict, syllable_end_dict, obs_map_
                   poem[8] +","+ poem[10] +","+ poem[9] +","+ poem[11] +","+ poem[12] +","+ poem[13] +"."
     return poem_output
 
+def generate_rhyme_new(model, rhyme_dict, syllable_dict, syllable_end_dict, obs_map_p):
+    rhyme_set = set()
+    index_to_set = collections.defaultdict(set)
+    word_to_index = {}
+    index = 0
+    for key, value in rhyme_dict.items():
+        if key not in rhyme_set:
+            word_to_index[key] = index
+            index_to_set[index].add(key)
+            rhyme_set.add(key)
+            for word in value:
+                word_to_index[word] = index
+                index_to_set[index].add(word)
+                rhyme_set.add(word)
+            index += 1
+    
+    poem = []
+    index_to_valid_sentence_set = defaultdict(list)
+    count = 0
+#     print("rhyme_set: ",rhyme_set)
+#     print("index_to_set: ",index_to_set)
+#     print("word_to_index: ",word_to_index)
+#     print(index)
+#     print("*******syllable_dict: ",syllable_dict)
+    while count < 7:
+        sentence = sample_sentence(model, obs_map_p, n_words=10)
+        words = sentence.split(" ")
+        print(words[0], sentence)
+        if words[0] in rhyme_dict:
+            
+            valid, valid_sentence = exact_ten_syllables(words, syllable_dict, syllable_end_dict)
+            #print("=====",words[0], valid_sentence)
+            if valid:
+                print(valid_sentence)
+                idx = word_to_index[words[0]]
+                index_to_valid_sentence_set[idx].append(valid_sentence)
+                if len(index_to_valid_sentence_set[idx])==2:
+                    poem.append(index_to_valid_sentence_set[idx][0])
+                    poem.append(index_to_valid_sentence_set[idx][1])
+                    index_to_valid_sentence_set[idx].remove(index_to_valid_sentence_set[idx][1])
+                    index_to_valid_sentence_set[idx].remove(index_to_valid_sentence_set[idx][0])
+                    count += 1
+                    print(count)
+    
+    for i in range(14):
+        poem[i] = reverse(poem[i])
+    
+    poem_output = poem[0] +","+ poem[2] +","+ poem[1] +","+ poem[3] +","+ poem[4] +","+ poem[6] +","+ poem[5] +","+ poem[7] + ","+ \
+                  poem[8] +","+ poem[10] +","+ poem[9] +","+ poem[11] +","+ poem[12] +","+ poem[13] +"."
+    return poem_output
+
 def reverse(sentence):
     words = sentence.split(" ")
     left = 0
@@ -415,9 +464,9 @@ def exact_ten_syllables(words, syllable_dict, syllable_end_dict):
         if count < 10:
             valid_words.append(word)
         elif count == 10:
-                valid_words.append(word)
-                valid = True
-                break
+            valid_words.append(word)
+            valid = True
+            break
         else:
             valid = False
     
