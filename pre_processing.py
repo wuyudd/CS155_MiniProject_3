@@ -1,11 +1,19 @@
 # load in files
 import numpy as np
+import random
+import heapq
 import sys
+
 import nltk
 nltk.download('punkt')
 from nltk.tokenize import sent_tokenize, word_tokenize, wordpunct_tokenize
-from HMM_helper import *
 
+from HMM_helper import *
+from HMM import *
+from build_rhyme_dict import *
+from syllable_dictionary import *
+from pre_processing import *
+from split_poem import *
 
 def load_shakespeare(filename):
     '''
@@ -340,13 +348,15 @@ def generate_rhyme(model, rhyme_dict, syllable_dict, syllable_end_dict, obs_map_
     while count < 7:
         sentence1 = sample_sentence(model, obs_map_p, n_words=10)
         words1 = sentence1.split(" ")
-        if (words1[0] in rhyme_dict) and (words1[0] not in non_dup):
+        if words1[0] in rhyme_dict:
+        #if (words1[0] in rhyme_dict) and (words1[0] not in non_dup):
             valid1, valid_sentence1 = exact_ten_syllables(words1, syllable_dict, syllable_end_dict)
             while valid1:
                 sentence2 = sample_sentence(model, obs_map_p, n_words=10)
                 words2 = sentence2.split(" ")
                 #print("================ words1[0] = ", words1[0], ", words2[0] = ", words2[0], "=========================")
-                if (words2[0] in rhyme_dict[words1[0]]) and (words2[0] not in non_dup):
+                if words2[0] in rhyme_dict[words1[0]]:
+                #if (words2[0] in rhyme_dict[words1[0]]) and (words2[0] not in non_dup):
                     valid2, valid_sentence2 = exact_ten_syllables(words2, syllable_dict, syllable_end_dict)
                     if valid2:
                         poem.append(valid_sentence1)
