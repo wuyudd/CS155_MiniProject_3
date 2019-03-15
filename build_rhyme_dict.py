@@ -17,6 +17,21 @@ def read_in_poems(filename):
 				new_poem.append(line)
 	return poems
 
+def read_in_poems_sepnser(filename):
+	poems = []
+	with open(filename, 'r') as f:
+		for line in f.readlines():
+			line = line.strip()
+			if line.isdigit() or len(line)<=6: # new poem starts
+				new_poem = []
+				count = 0
+			elif len(line) == 0:
+				count += 1
+				if count == 2: # this poem ends
+					poems.append(new_poem)
+			else:
+				new_poem.append(line)
+	return poems
 
 def get_last_word(poems):
 	all_poems_last_words = []
@@ -59,9 +74,16 @@ def get_rhyme_dict(filename):
 
 	return rhyme_dict
 
+def get_rhyme_dict_spenser(filename):
+	poems = read_in_poems_sepnser(filename)
+	all_poems_last_words = get_last_word(poems)
+	rhyme_dict = build_rhyme_dict(all_poems_last_words)
+
+	return rhyme_dict
+
 if __name__ == '__main__':
 	filename = "./project3/data/shakespeare.txt"
-	poems = read_in_poems(filename)
+	poems = read_in_poems_sepnser(filename)
 	#print(poems[0])
 	all_poems_last_words = get_last_word(poems)
 	#print(all_poems_last_words[0])

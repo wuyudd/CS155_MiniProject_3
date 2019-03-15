@@ -4,6 +4,7 @@ import sys
 import nltk
 nltk.download('punkt')
 from nltk.tokenize import sent_tokenize, word_tokenize, wordpunct_tokenize
+from HMM_helper import *
 
 
 def load_shakespeare(filename):
@@ -32,6 +33,34 @@ def load_shakespeare(filename):
                 poem += line
     return poems
 
+def load_spenser(filename):
+    '''
+    input: filename
+    output: list of strings, each string is a complete poem.
+    '''
+    poems = []
+    count = 0
+    with open(filename, 'r') as f:
+        poem = ""
+        for line in f.readlines():
+            if line[-1] != "\n": # the last poem
+                poems.append(poem)
+            line = line.strip()
+            if line.isdigit(): # digit for different poems
+                continue
+            elif len(line) <= 6:
+                continue
+            elif len(line) == 0: # 2 empty line, this poem ends
+                count += 1
+                if count == 2:
+                    poems.append(poem.strip())
+                    poem = ""
+                    count = 0
+            else:
+                line += " "
+                poem += line
+    return poems
+
 def load_shakespeare_sentences(filename):
     '''
     input: filename
@@ -47,6 +76,29 @@ def load_shakespeare_sentences(filename):
             elif line.isdigit(): # peom number
                 #print("# of peom = ", int(line)-1, ", count = ", count)
                 count = 0
+                continue
+            else: # sentence
+                sentences.append(line)
+                count += 1
+    return sentences 
+
+def load_spenser_sentences(filename):
+    '''
+    input: filename
+    output: list of strings, each string is a sentence.
+    '''
+    sentences = []
+    count = 0
+    with open(filename, 'r') as f:
+        for line in f.readlines():
+            line = line.strip()
+            if len(line) == 0: # empty line
+                continue
+            elif line.isdigit(): # peom number
+                #print("# of peom = ", int(line)-1, ", count = ", count)
+                count = 0
+                continue
+            elif len(line) <= 6:
                 continue
             else: # sentence
                 sentences.append(line)
@@ -233,6 +285,53 @@ def pre_processing_sentences_reverse(filename):
     print("count of puncs = ", count)
     return rev_obs, rev_obs_map
 
+def pre_processing_sentences_reverse_spenser(filename_sha, filename_spen):
+    count = 0
+    puncs = list('\'!()[]{};:"\\,<>./?@#$%^&*_~') 
+    rev_sentences_origin = load_shakespeare_sentences_reverse(filename_sha)
+    rev_sentences = lower_case(rev_sentences_origin)
+    with_puncs_tokens = pre_tokenize(rev_sentences)
+    no_puncs_tokens = remove_punc(with_puncs_tokens)
+    for no_puncs_token in no_puncs_tokens:
+        for item in no_puncs_token:
+            if item in puncs:
+                count += 1
+                print("*********************** Warning ***********************")
+                print("There is still punctions in pre_processing_sentences-no_puncs_tokens!")
+                print("The punction is: ", item)
+                print("Is this punction in puncs? ", item in puncs)
+                print("*********************** Warning End ***********************")
+    rev_obs, rev_obs_map = encode(no_puncs_tokens)
+    
+    
+    rev_sentences_spenser = load_spencer_sentences_reverse(filename_spen)
+    rev_sentences_spenser = lower_case(rev_sentences_spenser)
+    with_puncs_tokens_spenser = pre_tokenize(rev_sentences_spenser)
+    no_puncs_tokens_spenser = remove_punc(with_puncs_tokens_spenser)
+    for no_puncs_token in no_puncs_tokens_spenser:
+        for item in no_puncs_token:
+            if item in puncs:
+                count += 1
+                print("*********************** Warning ***********************")
+                print("There is still punctions in pre_processing_sentences-no_puncs_tokens!")
+                print("The punction is: ", item)
+                print("Is this punction in puncs? ", item in puncs)
+                print("*********************** Warning End ***********************")
+    
+    obs_map = rev_obs_map
+    obs = rev_obs
+    index = len(obs_map)
+    for line in no_puncs_tokens_spenser:
+        curr_line = []
+        for word in line:
+            if word not in obs_map:
+                obs_map[word] = index
+                index += 1
+            curr_line.append(obs_map[word])
+        obs.append(curr_line)
+        
+    return obs, obs_map
+
 # for hmm
 def generate_rhyme(model, rhyme_dict, syllable_dict, syllable_end_dict, obs_map_p):
     poem = []
@@ -246,7 +345,7 @@ def generate_rhyme(model, rhyme_dict, syllable_dict, syllable_end_dict, obs_map_
             while valid1:
                 sentence2 = sample_sentence(model, obs_map_p, n_words=10)
                 words2 = sentence2.split(" ")
-#                 print("========:", words1, words2)
+                #print("================ words1[0] = ", words1[0], ", words2[0] = ", words2[0], "=========================")
                 if (words2[0] in rhyme_dict[words1[0]]) and (words2[0] not in non_dup):
                     valid2, valid_sentence2 = exact_ten_syllables(words2, syllable_dict, syllable_end_dict)
                     if valid2:
@@ -318,6 +417,8 @@ def exact_ten_syllables(words, syllable_dict, syllable_end_dict):
             valid_sentence += word + " "
     
     return valid, valid_sentence.strip()
+
+
 
 
 if __name__ == '__main__':
