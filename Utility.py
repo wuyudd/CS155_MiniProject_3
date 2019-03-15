@@ -11,7 +11,7 @@ class Utility:
     Utility for the problem files.
     '''
 
-    def __init__(self):
+    def __init__():
         pass
 
     @staticmethod
