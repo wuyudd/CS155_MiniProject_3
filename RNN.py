@@ -232,7 +232,7 @@ def rnn(filepath, temp, epochs_num):
 
 def rnn_word(filepath, temp, epochs_num):
 	text = load_text_as_string(filepath)
-	step = 3
+	step = 1
 	batch_size = 32
 	temperature = temp
 	epochs = epochs_num
