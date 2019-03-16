@@ -65,6 +65,7 @@ def get_num_syllables(curr_word, syllable_dict):
     elif len(syllable_dict[curr_word]) == 1: # only one syllable
         curr_word_syllable = syllable_dict[curr_word][0]
     else:
+        curr_word_syllable = 2
         print("*********************** Warning ***********************")
         print("There is an error in the syllable of this word!")
         print("Current word is: ", curr_word, ", Syllable of current word = ", syllable_dict[curr_word])
