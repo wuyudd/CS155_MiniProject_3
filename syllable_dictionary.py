@@ -27,6 +27,25 @@ def get_syllable_dict(filename):
     syllable_dict, syllable_end_dict = dictionary(words)
     return syllable_dict, syllable_end_dict
 
+def add_spenser_syllable_dict(words, syllable_dict):
+    for word in words:
+        if(word not in syllable_dict):
+            #s = []
+            try:
+                syllable_dict[word] = look_thru_cmu(word)
+            except:
+                syllable_dict[word] = look_thru_pyphen(word)
+    return syllable_dict
+
+def look_thru_cmu(word):
+    d = cmudict.dict()
+    return [len(list(y for y in x if y[-1].isdigit())) for x in d[word.lower()]]
+
+def look_thru_pyphen(word):
+    dic = pyphen.Pyphen(lang='en')
+    parsedWord = dic.inserted(word)
+    return parsedWord.count('-') + 1
+
 if __name__ == '__main__':
 	filename = "./project3/data/Syllable_dictionary.txt"
 	syllable_dict, syllable_end_dict = get_syllable_dict(filename)

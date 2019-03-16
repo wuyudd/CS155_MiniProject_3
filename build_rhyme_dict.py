@@ -22,13 +22,15 @@ def read_in_poems_sepnser(filename):
 	with open(filename, 'r') as f:
 		for line in f.readlines():
 			line = line.strip()
-			if line.isdigit() or len(line)<=6: # new poem starts
+			if len(line) < 10 and len(line) != 0: # new poem starts
 				new_poem = []
 				count = 0
 			elif len(line) == 0:
 				count += 1
 				if count == 2: # this poem ends
 					poems.append(new_poem)
+				new_poem = []
+				count = 0
 			else:
 				new_poem.append(line)
 	return poems
@@ -80,6 +82,26 @@ def get_rhyme_dict_spenser(filename):
 	rhyme_dict = build_rhyme_dict(all_poems_last_words)
 
 	return rhyme_dict
+
+def combine_sha_spen_rhyme_dict(sha_rhyme_dict, spen_rhyme_dict):
+	comebine_rhyme_dict = {}
+	for key_spen, value_spen in spen_rhyme_dict.items():
+		if key_spen in sha_rhyme_dict.keys():
+			new_rhyme_words = list(set(value_spen + sha_rhyme_dict[key_spen]))
+			comebine_rhyme_dict[key_spen] = new_rhyme_words
+		else:
+			comebine_rhyme_dict[key_spen] = value_spen
+
+	for key_sha, value_sha in sha_rhyme_dict.items():
+		if key_sha not in spen_rhyme_dict.keys():
+			comebine_rhyme_dict[key_sha] = value_sha
+
+	print("!!! IN build_rhyme_dict.py function: combine_sha_spen_rhyme_dict")
+	print("1==length of sha_rhyme_dict = ", len(sha_rhyme_dict))
+	print("2==length of spen_rhyme_dict = ", len(spen_rhyme_dict))
+	print("3==length of comebine_rhyme_dict = ", len(comebine_rhyme_dict))
+	print("!!! OUT build_rhyme_dict.py function: combine_sha_spen_rhyme_dict")
+	return comebine_rhyme_dict
 
 if __name__ == '__main__':
 	filename = "./project3/data/shakespeare.txt"

@@ -3,7 +3,7 @@ import numpy as np
 import random
 import heapq
 import sys
-
+import collections
 import nltk
 nltk.download('punkt')
 from nltk.tokenize import sent_tokenize, word_tokenize, wordpunct_tokenize
@@ -21,12 +21,15 @@ def load_shakespeare(filename):
     poems = []
     count = 0
     with open(filename, 'r') as f:
-        poem = ""
         for line in f.readlines():
+            #print(line)
             if line[-1] != "\n": # the last poem
-                poems.append(poem)
+                #print("last poem")
+                poem += line.strip()
+                poems.append(poem.strip())
             line = line.strip()
             if line.isdigit(): # digit for different poems
+                poem = ""
                 continue
             elif len(line) == 0: # 2 empty line, this poem ends
                 count += 1
@@ -45,27 +48,39 @@ def load_spenser(filename):
     output: list of strings, each string is a complete poem.
     '''
     poems = []
-    count = 0
+    empty_count = 0
     with open(filename, 'r') as f:
-        poem = ""
         for line in f.readlines():
             if line[-1] != "\n": # the last poem
-                poems.append(poem)
+                #print("last poem")
+                poem += line.strip()
+                poems.append(poem.strip())
             line = line.strip()
-            if line.isdigit(): # digit for different poems
-                continue
-            elif len(line) <= 6:
+            if len(line) < 10 and len(line) != 0:
+                poem = "" # new poem
                 continue
             elif len(line) == 0: # 2 empty line, this poem ends
-                count += 1
-                if count == 2:
+                empty_count += 1
+                if empty_count == 2:
+                    #print("poem ends")
                     poems.append(poem.strip())
                     poem = ""
-                    count = 0
+                    empty_count = 0
             else:
                 line += " "
                 poem += line
     return poems
+
+def load_spenser_words(poems):
+    result = pre_tokenize(poems)
+    puncs = '\'!()[]{};:"\\,<>./?@#$%^&*_~'
+    words = []
+    for poem_res in result:
+        for word in poem_res:
+            if word not in puncs:
+                words.append(word)
+    return words
+
 
 def load_shakespeare_sentences(filename):
     '''
@@ -73,7 +88,7 @@ def load_shakespeare_sentences(filename):
     output: list of strings, each string is a sentence.
     '''
     sentences = []
-    count = 0
+    #count = 0
     with open(filename, 'r') as f:
         for line in f.readlines():
             line = line.strip()
@@ -81,11 +96,11 @@ def load_shakespeare_sentences(filename):
                 continue
             elif line.isdigit(): # peom number
                 #print("# of peom = ", int(line)-1, ", count = ", count)
-                count = 0
+                #count = 0
                 continue
             else: # sentence
                 sentences.append(line)
-                count += 1
+                #count += 1
     return sentences 
 
 def load_spenser_sentences(filename):
@@ -94,21 +109,13 @@ def load_spenser_sentences(filename):
     output: list of strings, each string is a sentence.
     '''
     sentences = []
-    count = 0
     with open(filename, 'r') as f:
         for line in f.readlines():
             line = line.strip()
-            if len(line) == 0: # empty line
-                continue
-            elif line.isdigit(): # peom number
-                #print("# of peom = ", int(line)-1, ", count = ", count)
-                count = 0
-                continue
-            elif len(line) <= 6:
+            if len(line) < 10:
                 continue
             else: # sentence
                 sentences.append(line)
-                count += 1
     return sentences 
 
 
@@ -142,20 +149,44 @@ def load_shakespeare_sentences_reverse(filename):
                 #count += 1
     return rev_sentences 
 
+def load_spenser_sentences_reverse(filename):
+    '''
+    input: filename
+    output: list of strings, each string is a reversed sentence. (no end puncs)
+    '''
+    rev_sentences = []
+    with open(filename, 'r') as f:
+        for line in f.readlines():
+            line = line.strip()
+            new_line = ""
+            if len(line) < 10: # useless line
+                continue
+            else: # sentence
+                if line[-1].isalpha():
+                    words = line.split(" ")
+                    rev_words = [words[i] for i in range(len(words)-1, -1, -1)] # reverse
+                    new_line = " ".join(rev_words)
+                else:
+                    words = line[:-1].split(" ")
+                    rev_words = [words[i] for i in range(len(words)-1, -1, -1)]
+                    new_line = " ".join(rev_words)
+            rev_sentences.append(new_line)
+    return rev_sentences 
+
 def lower_case(list_of_strings):
     new_list = []
     for string in list_of_strings:
         new_list.append(string.lower())
     return new_list
 
-def pre_tokenize_full(poems):
+def pre_tokenize_full(poem):
     #return list of string
     # result = []
     #puncs = '\'!()[]{};:"\\,<>./?@#$%^&*_~'
     # for poem in poems:
-    tokens_nltk = word_tokenize(poems)
+    tokens_nltk = word_tokenize(poem)
     #tokens_nltk = wordpunct_tokenize(poem)
-    has_s = False    
+    #has_s = False    
     #print("tokens_nltk = ", tokens_nltk)
     
     for i in range(len(tokens_nltk)):
@@ -174,7 +205,7 @@ def pre_tokenize(poems):
     for poem in poems:
         tokens_nltk = word_tokenize(poem)
         #tokens_nltk = wordpunct_tokenize(poem)
-        has_s = False    
+        #has_s = False    
         #print("tokens_nltk = ", tokens_nltk)
         
         for i in range(len(tokens_nltk)):
@@ -243,7 +274,7 @@ def pre_processing_poems(filename):
                 print("The punction is: ", item)
                 print("Is this punction in puncs? ", item in puncs)
                 print("*********************** Warning End ***********************")
-    print("count = ", count)
+    #print("count = ", count)
     obs, obs_map = encode(no_puncs_tokens)
     # print("********************* obs *********************")
     # print(obs[0])
@@ -292,7 +323,7 @@ def pre_processing_sentences_reverse(filename):
     return rev_obs, rev_obs_map
 
 def pre_processing_sentences_reverse_spenser(filename_sha, filename_spen):
-    count = 0
+    #count = 0
     puncs = list('\'!()[]{};:"\\,<>./?@#$%^&*_~') 
     rev_sentences_origin = load_shakespeare_sentences_reverse(filename_sha)
     rev_sentences = lower_case(rev_sentences_origin)
@@ -301,42 +332,42 @@ def pre_processing_sentences_reverse_spenser(filename_sha, filename_spen):
     for no_puncs_token in no_puncs_tokens:
         for item in no_puncs_token:
             if item in puncs:
-                count += 1
                 print("*********************** Warning ***********************")
-                print("There is still punctions in pre_processing_sentences-no_puncs_tokens!")
+                print("There is still punctions in pre_processing_sentences_reverse_spenser-no_puncs_tokens!")
                 print("The punction is: ", item)
                 print("Is this punction in puncs? ", item in puncs)
                 print("*********************** Warning End ***********************")
     rev_obs, rev_obs_map = encode(no_puncs_tokens)
     
     
-    rev_sentences_spenser = load_spencer_sentences_reverse(filename_spen)
-    rev_sentences_spenser = lower_case(rev_sentences_spenser)
+    rev_sentences_spenser_origin = load_spenser_sentences_reverse(filename_spen)
+    rev_sentences_spenser = lower_case(rev_sentences_spenser_origin)
     with_puncs_tokens_spenser = pre_tokenize(rev_sentences_spenser)
     no_puncs_tokens_spenser = remove_punc(with_puncs_tokens_spenser)
     for no_puncs_token in no_puncs_tokens_spenser:
         for item in no_puncs_token:
             if item in puncs:
-                count += 1
                 print("*********************** Warning ***********************")
-                print("There is still punctions in pre_processing_sentences-no_puncs_tokens!")
+                print("There is still punctions in pre_processing_sentences_reverse_spenser-no_puncs_tokens!")
                 print("The punction is: ", item)
                 print("Is this punction in puncs? ", item in puncs)
                 print("*********************** Warning End ***********************")
-    
-    obs_map = rev_obs_map
-    obs = rev_obs
-    index = len(obs_map)
-    for line in no_puncs_tokens_spenser:
-        curr_line = []
-        for word in line:
-            if word not in obs_map:
-                obs_map[word] = index
+
+    index = len(rev_obs_map)
+    print("!!! IN pre_processing.py, function: pre_processing_sentences_reverse_spenser")
+    print("only shakespeare rev_obs_map length = ", len(rev_obs_map))
+    for sentence in no_puncs_tokens_spenser:
+        curr_sentence = []
+        for token in sentence:
+            if token not in rev_obs_map:
+                rev_obs_map[token] = index
                 index += 1
-            curr_line.append(obs_map[word])
-        obs.append(curr_line)
-        
-    return obs, obs_map
+            curr_sentence.append(rev_obs_map[token])
+        rev_obs.append(curr_sentence)
+    print("shakespeare+spenser rev_obs_map length = ", len(rev_obs_map))
+    print("!!! OUT pre_processing.py, function: pre_processing_sentences_reverse_spenser")
+    
+    return rev_obs, rev_obs_map
 
 # for hmm
 def generate_rhyme(model, rhyme_dict, syllable_dict, syllable_end_dict, obs_map_p):
@@ -367,8 +398,8 @@ def generate_rhyme(model, rhyme_dict, syllable_dict, syllable_end_dict, obs_map_
     for i in range(14):
         poem[i] = reverse(poem[i])
     
-    poem_output = poem[0] +","+ poem[2] +","+ poem[1] +","+ poem[3] +","+ poem[4] +","+ poem[6] +","+ poem[5] +","+ poem[7] + ","+ \
-                  poem[8] +","+ poem[10] +","+ poem[9] +","+ poem[11] +","+ poem[12] +","+ poem[13] +"."
+    poem_output = poem[0] +"\n"+ poem[2] +"\n"+ poem[1] +"\n"+ poem[3] +"\n"+ poem[4] +"\n"+ poem[6] +"\n"+ poem[5] +"\n"+ poem[7] + "\n"+ \
+                  poem[8] +"\n"+ poem[10] +"\n"+ poem[9] +"\n"+ poem[11] +"\n"+ poem[12] +"\n"+ poem[13] +"."
     return poem_output
 
 def generate_rhyme_new(model, rhyme_dict, syllable_dict, syllable_end_dict, obs_map_p):
@@ -398,13 +429,13 @@ def generate_rhyme_new(model, rhyme_dict, syllable_dict, syllable_end_dict, obs_
     while count < 7:
         sentence = sample_sentence(model, obs_map_p, n_words=10)
         words = sentence.split(" ")
-        print(words[0], sentence)
+        #print(words[0], sentence)
         if words[0] in rhyme_dict:
             
             valid, valid_sentence = exact_ten_syllables(words, syllable_dict, syllable_end_dict)
             #print("=====",words[0], valid_sentence)
             if valid:
-                print(valid_sentence)
+                #print(valid_sentence)
                 idx = word_to_index[words[0]]
                 index_to_valid_sentence_set[idx].append(valid_sentence)
                 if len(index_to_valid_sentence_set[idx])==2:
@@ -413,13 +444,13 @@ def generate_rhyme_new(model, rhyme_dict, syllable_dict, syllable_end_dict, obs_
                     index_to_valid_sentence_set[idx].remove(index_to_valid_sentence_set[idx][1])
                     index_to_valid_sentence_set[idx].remove(index_to_valid_sentence_set[idx][0])
                     count += 1
-                    print(count)
+                    #print("count in generate_rhyme_new = ", count)
     
     for i in range(14):
         poem[i] = reverse(poem[i])
     
-    poem_output = poem[0] +","+ poem[2] +","+ poem[1] +","+ poem[3] +","+ poem[4] +","+ poem[6] +","+ poem[5] +","+ poem[7] + ","+ \
-                  poem[8] +","+ poem[10] +","+ poem[9] +","+ poem[11] +","+ poem[12] +","+ poem[13] +"."
+    poem_output = poem[0] +"\n"+ poem[2] +"\n"+ poem[1] +"\n"+ poem[3] +"\n"+ poem[4] +"\n"+ poem[6] +"\n"+ poem[5] +"\n"+ poem[7] + "\n"+ \
+                  poem[8] +"\n"+ poem[10] +"\n"+ poem[9] +"\n"+ poem[11] +"\n"+ poem[12] +"\n"+ poem[13] +"."
     return poem_output
 
 def reverse(sentence):
@@ -456,7 +487,7 @@ def exact_ten_syllables(words, syllable_dict, syllable_end_dict):
         elif len(syllable_dict[word]) == 1:
             curr_syllable_len = syllable_dict[word][0]
         else:
-            print(len(syllable_dict[word]))
+            #print(len(syllable_dict[word]))
             rnd_idx = random.randint(0, len(syllable_dict[word])-1)
             curr_syllable_len = syllable_dict[word][rnd_idx]
         
@@ -476,8 +507,6 @@ def exact_ten_syllables(words, syllable_dict, syllable_end_dict):
             valid_sentence += word + " "
     
     return valid, valid_sentence.strip()
-
-
 
 
 if __name__ == '__main__':
