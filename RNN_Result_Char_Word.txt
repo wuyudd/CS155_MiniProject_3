@@ -1,0 +1,1435 @@
+RNN Result
+1. Char based, step = 5
+(1)
+************************* Final *************************
+Current epoch number =  50
+Current Temperature =  1.5
+Error_In_Char =  0.1030782137248939 , Perplexity metrics =  1.1085781117087476
+*************************Generate Char Text *************************
+new text word:  shall i compare thee to a summer's day?
+why shound (hy swient's me time's my love,
+when even tear hat fur thiin, on yous the 
+att?
+now is thou art,
+whe epe ill at weel frumy, and hath bright,
+and lovery what in my silf hinge on my speet,
+then in her fairered all bare nowest,
+and tornsu for thing an of thy wolds' frowlr?
+in ofr is the vingre,
+she though slowk my sonr pabce there subled,
+ro now i not, of nend head fat surpene.
+bo me it the rewoul his quift, might stell
+ang beauty ssmand loves and thenenowerth which thy shayl,
+when i have st-the pupbled fat dut me,
+and the beauty some is thy hallss thee in arcest,
+and love thou destor dimming, bot sty love,
+when beart stall welt be thou rest?
+net what io this still fire nombers,
+and the blow mus less beauthour (every when,
+when i my deford not sware whop it dest,
+ent werth me thee and actien of strance,
+and geathour peailes my more respeet,
+of frights, my love in the mill sors
+and in when parues simple.
+ongh im betare as man eyes on thours ade,
+bet this my love gaanti lov'st the partered,
+the earts ies me to me vistard had wish,
+wo thou ir for their, oor doaknd my parte:
+the erewing flame is not both forder?
+wht of lose had eres purpe.
+if i sabe seect in posters beiter prayse,
+to ering that love, and thou (lot' rakserd wheness thme my love,
+when i make that with my lovell hey lover
+whate or the ele, or wese dowknd deflove.
+whone restring mome,
+which the ellly lov's and toulls sispere,
+but lot's tork'll thy swwet'st thou ait,
+as thou thee bith but in weed flembert stel
+
+he thou art crient doth my love ramy list,
+to those thy obles on houst is the bear,
+that thou bestore love what to me vinger?
+whan all not and woth fool ait, to ware,
+on tey frountercals be thee if dece vare,
+and thrughtle dose nangec my menders
+and beatty ham graw: a dother preesing press,
+when if he warn of romour be my fares,
+in my like and pisses of your whthe,
+which in my sweet some in ofer painy.
+whins of your thou ait, and chow the conded:
+of ney love,
+what in hes remore, and net ig this flame:
+braw sweel by sigft?
+on why slied in heraking me to mo bal, hire,
+the biaty's rase and the faurtyous tere.
+the will ny court monkind of the baite,
+as averse wime in thy beaution thou alt,
+and in thir (lightliss on spart.
+of love whan i momen lov's world of thise,
+with my self a dothen ;ewert's distained.
+for sure, a parny foomes, the elest parse is perein.
+wo lit thy erewort lowks appured comenccansed,
+of still thrue toures of hearsered,
+and pareds of yew remobr a deequing.
+thy mendest shounden thy fairn, and tong.
+st pabtion good,
+on all'sk my love,
+thy that thou dombling eyes and yeweds:
+to all three thy love with thy beauty,
+ahing and perce ienigleser betiles, but that havensthint ore,
+who sore whel aghtthe wist,
+'o can hou a then ach the efore of mine,
+whence decperel being had o toun, my hook,
+havi's thy loveling thy sould making then my sell,
+looks whet you atter ampering brends,
+do noves not remort a damyer sweet send.
+on love is thit steyss then in a fool doong.
+ais i 
+*************************Generate Char Text End*************************
+
+(2)
+************************* Final *************************
+Current epoch number =  50
+Current Temperature =  0.75
+Error_In_Char =  0.08136666880635766 , Perplexity metrics =  1.0847685744526359
+*************************Generate Char Text *************************
+new text word:  shall i compare thee to a summer's day?
+whou for thine oull agiteran and ablagh de breess,
+the canked knewst by ugeatibe a doth mide.
+when i hask a worn-light,
+shilllang one, parter swert climk frow wrick thy mong,
+love in thinesand oo hoo gives the bat what baint,
+when in he resore my sorrnce the seafory allesp,
+the party wret mong raiter sulf around,
+ande, and my have my his) glest my sombered:
+in minken moums of me will beirg:
+to ming are my hours all all in oun,
+as purebo but me fair haives be tome,
+and therere to you is the lovins hate stall and,
+and momane of i mice thou destoressone,
+as my doth creess in and hir thee bose thee,
+and lood on thy hair shail should thee,
+my sturn cromn with all thy beauty for nome.
+shall mand bught in a pion's praited frow
+the word to know,
+nor the cond?ind of that love in hase thee,
+which cherce mey with forthound of me heart,
+and hould beint exew placcest trougltss prace,
+and hath ele to cherking, and me and whach than cays,
+love in anl fooser kiving sad, you ap ith,
+and timn' (in all farserncemment but dest tee boig,
+do thou fast or my live, thy show, what my breal,
+in ever-longs a love with cance controve,
+thou mand love ow ry vandirop and cal
+ent be thee, where astel it perugus of hisw,
+thou art a foven to the erest penng),
+and lov.
+th tht eyist love thee worth my jude prood,
+outh (with my love, youth my love nagne.
+sherte beauty stell thy part ound of pare,
+whece it me fairse doyy live ap romand all,
+in monk all my lovel that thy mo,
+art my freessone,
+of arnd of rind, of thou love, thy heart,
+to shaw thy shell though me bilis suale arowe
+to thy love in hat whith heid in than ben
+if bull ghel, and now which exes is by them,
+which hand (cainer skanded thy swert what was is mlikn ded:
+so beady the love but thing all thy elewher with me beswees,
+to like and the mach by four nom being ame.
+whoh falls (erse mine eye ase worl-tought,
+more if the mony whac soon show, sof comberth
+fiver newer leave hew troughts drach then whel a.
+which i thy show,
+hou hast to will whichling of therelight,
+that do this conttared my somb bring mide:
+thou love thou shot dear how friended poud?
+on hath my foutless me in thise facr of love,
+my stoull making am the world but in now,
+the loow wrat worthy bing) the earth frow thee,
+whoref in the strinks whose see-the wart
+wo chough to now sulf thou haght i an thee,
+ast my fou the sade that dout still be roed?
+loth me beart in the bartion mo hand out,
+and mothon all all the rantereclonted.
+firidul thy sarme in the side of love,
+that thou made self thou show, that yet bess,
+the liven ruth concued of sichtle murte,
+when i ame dastance and me,
+mere flight of long that thou swael hou daines,
+with bettile a coont-on my love but thou mas,
+(the line, the reasonc mose strengs my men.
+for glences the rinklang that thoughtst wrencs the loop.
+on hath my love, thou stuel inge, nor s ame.
+be all my self in(-woind of thine farse allothink, and how trou nate,
+whe ofony decenting the tool which gaves that thou nate,
+nor me beart in the every w
+*************************Generate Char Text End*************************
+
+(3)
+************************* Final *************************
+Current epoch number =  50
+Current Temperature =  0.25
+Error_In_Char =  0.105640999523645 , Perplexity metrics =  1.111422803561218
+*************************Generate Char Text *************************
+new text word:  shall i compare thee to a summer's day?
+whong baty be then thy stath spouldst faol,
+of hor freee soth negredthin, my every then.
+what far lood be of theing amany hough my strme
+tor faired goth that hal berich desting frame,
+no incended to and and peace is glest,
+till the well buttur now, whe engt ed proum the cundengll age
+peeress dath my mone.
+whissir thoubbety shame spinetes kilds 'reded grans,
+the glaging the strand with own to bring:
+sore beast some andayered dopn,
+and count not love mates i heve you shatl,
+and il thy hose make the stry defall what thy pact.
+the robing that storn shall showl thee atterrng;
+thou browl thee in thy gavely that wouldess it before,
+and the bitte mose is thingurne shall serfing.
+thou dade to now appess, cone mande,
+on whough my vistor still try math love,
+thou hast toom may shy eveny with this wignt,
+ot erst tore beauty sweet legets of mene.
+i save in youthy beauty live,
+what thy mose fice that that hamone all be
+the crewide ou live rommed do beates are thee,
+where bute ad fould when i count cunquine:
+ghane brest the pappe, rought bef ase made:
+both of thou and my eve, from many befude.
+for thy ere the fraice doth migetly sidst:
+i let self i mend be peaury is wetted
+it beattest bloss shinl athay stranter's despeed.
+in be fare ount it me remmedere as net bence,
+and thet it thy poby,
+and your where you dast that thou may be.
+oo suin st inger cens i comporing:
+bet could my love in not beave doom ounn.
+and 'it all belues shate sichar place is bift.
+in an arch in lot sweet lead be foend.
+on of doth net ends my eost proving of toug
+that the stors worthin, for theills and ire,
+and 'orge in not sweet leapure,
+and the baing that you ase soon yeure.
+for thou decorthes nows that hamy might chest clest,
+as your can,eny, she dot mo both mine eyou?
+while a foor would of you i woth kin theee.
+bethe but som, being that you their she thee.
+which it not seamony on preisioned,
+ind br i parte come,, ner th uponce, ard new rfort,
+and tertern grow, that that wime of soll mine eyesh are aserss,
+and love you shauld brough ut not sollost?
+sh love it intert math being than hath belove?
+on mine ere,
+whing hate thou a thou strem thy strenst,
+you ghat hatr fair doth gide, cone furng.
+nat ounde. ig that i casse i now hee to as,
+and peature, now the strwhing howe to an,
+and every whaked i winde,
+wht fortered, nor thy beauty urind, for gleat,
+and ther from the conder's still noted to cons,
+of hast sommening handeredinged mone mund.
+when it net romm being comanded now
+steand bet cemer, dedid love's pistild,
+the butt with oftrind bross, doon 'hay dithought,
+my eve wich cone that i marke the part, and theirght,
+and silve is which in new,
+shat thy haptered gnawing the sing essed.
+bo nabur clest i blow thy pobbert thind hich,
+and hall thy well book what houd mo have,
+which now, what hep is hath hou did fain.
+whos wart, nor i whing ound acconeteness:
+in eveny hall thy elfward with fare of line,
+which thou in host the vony ruchen,
+which mantere camse i sweet i nowill the worl
+whise, have in w
+*************************Generate Char Text End*************************
+
+(4)
+************************* Final *************************
+Current epoch number =  100
+Current Temperature =  1.5
+Error_In_Char =  0.039330168740341766 , Perplexity metrics =  1.0401138400406436
+*************************Generate Char Text *************************
+new text word:  shall i compare thee to a summer's day?
+i men sief of ever thine hil which thoughts losts
+or im not be unfeccuent's urters
+firme thet bay and dead hip cameer:
+lo that in my love remoll the four do doth beart.
+ind ilougat that woold my self araren
+musk where yet this hight butt wosh dese,
+by palts of the eye, what i thine eye,
+and in girds thy conding of thim ihly
+seril's prowl thee have not,
+of hen when in my deapore minetey's congure,
+and grought thot spjong rome, bo crment many,
+as vis be the self i're, lover cond not with
+upong shall be thy shave an whet concer plous.
+the il be thy blagter didat do thy evends,
+love it thy word the eveny whal thou she,
+my love is my sweet love hath not be destech,
+to thy sweet wist love my cond for pooy now,
+since my love, thou distint me earst,
+when yet thou love, in your praise seel beauty the wall
+where yet thy own troung thy mongrong have haws wath the word.
+then i have choud not trought my love ree,
+and the mice of pount wooks not so love.
+lother nath come me eart woll's proust dost,
+thing eyes comen siafly my sell the owers,
+the reaking the bownrand beauty strens,
+when i bowk be dost love no mece therefore,
+and tome my stre ind het in my knewl,
+the reppild no coure of thing rich is being.
+the searing mo findont this cointed liest?
+weri beauty blloser iines it her whils shide of wor,
+showe the laalo eyes un abous all halds world tree
+made his gartswoudd thee
+thy beauty that for me firmmerest flown deer bless
+do then thou shoul sell the oust to the glags,
+the contlong hind of this mist of rowe.
+hereeve thee and the mury withou thy ele,
+and what ie thou sel-the jude in leads hath the eye,
+and to michine eyourt heart all thy string:
+when i am, bree, my now my yet to the word,
+that in thy stre bold so love mo crow,
+the earting not thim hatres whel in thy exe,
+the riven the love what it mankit me feir.
+who ofer that thou say art my hingm it is spiing:
+which hin thy blawsor's porges that i amend,
+the winte thy strent of for me ferting fail.
+the bartering thy mosent of in the stranger,
+rusince poome dith not bat's abred and whate gualts,
+hove's all the juppe is mare but fearth?
+i come is whttest do thou be thes, for thee,
+which not thy sorb the forle in my hiving,
+the wintere stall whild ancerserce bay the liest.
+my shall see love you not of thou art,
+the wilthing hink of for me, and therefing.
+for thy sweet of love, thee my gov' gay
+wath my lote mine eye, astnight mistur net,
+shange the ramoured with manke wo love hand coute.
+love thou ad the love my love hath sinkly thy selt be they day.
+whel in love to chink eyes or my vinth,
+and the parting hand himg not all thy self kee,
+say yet receepll thy mentt end in my vied.
+ince the rack agconn bight mate the worth,
+in eud that foom shave in my eyese love.
+hat mend from the fairer beite furting and.
+illens prow that i grow, to thou comport,
+that the warper cmentle me tremperaich deer,
+fistuy sech choud the vintl thy self in pales,
+me all be the ride of hus contury common:
+rhack that porear pabce to whe -lood
+*************************Generate Char Text End*************************
+
+(5)
+************************* Final *************************
+Current epoch number =  100
+Current Temperature =  0.75
+Error_In_Char =  0.04210966253711752 , Perplexity metrics =  1.0430088514763358
+*************************Generate Char Text *************************
+new text word:  shall i compare thee to a summer's day?
+why being mand a morn live with thes, reeperch to conce:
+be frre that woutd move, which i was nove,
+thy boant giod a love has popiry?on amouby
+what bear hos maring ling a dould for thee.
+unen the busting ald my dest deareng that not sket on less, kind,
+the ould a fove bestate, my vival for my hade,
+why pint'st i tome in world britt braut as,
+the bulte ald this will thy grewent will
+which is hast on eyss deepert
+loth mine my love not sunfore,
+withou de thes rasing mone mone mine eyes,
+weepe thou dest pligst thy whong my sholl,
+and you i if not she lovg's my worth sweet,
+and that frimes mine eyes, indseeired
+you art that me to which kinds is have,
+that i may, my me, i' errfal ag when thou the speate,
+which hath my wor forss the say of if ies?
+st thou shell whilhights the will bot' may,
+whe orouthersseme the would als coner,
+what in thy black some insere, my forat come,
+unde st thou may still sink owh me mose,
+what in thy befor doth ney proud hat bearn.
+so the elight the spoly to kee smee,
+that this hamoor as for hin wist best to chince:
+be thy beauty love i sweet eyes ast
+in live in mune deers deadoncus, the if to chee,
+thy beauty had' whele redabll life a maty,
+whet of thou love, sucher to ammorn,
+sh plan that manys whet st ingh chend work
+why sulf be upont thou dest denight bur with this mise reess,
+koow if the blast doth peessed dith did might.
+pericus ulowarl that that giless make not stee,
+ard the will for the erew and gleath to me,
+that the suchan plove afuind fachee to heart
+that pleck of love insure is have stond beast.
+on hur thy sweet'er hit gulfon lood ast and with sers,
+to seloss the elight that hat i come,
+love is that which i thand and of my self love,
+agart's for their whith of the strown ther,
+and that foughth this shill shall when is swiet?
+s al orn worth that my fare doth dece par.
+whol it do the canl of thy see thin with my blast,
+so this mine respove a to moke prous,
+to as thy love dath the would mosere's ot,
+so longer that thy meliss frintsh proud hath sunce on witt,
+my poor not sond eyewark where cone,
+where you is fairted cuspe conce to cammed.
+for i thou ast ammosh frees conncher forn.
+what yest hath glante thy shull the brise,
+whot it thou apper is when do thig thou doth.
+bo nom love is reaure his glacted to as,
+to this have shand beauty ster looks wo ash
+the bray whene hath hy showare,
+and thy beaut all the uree the barking mad,
+the wild nature chount my doth skgett love
+what be thousss in tise, my self my gart,
+and heart enew beant gieds to love sanke,
+my debrour stinter chemper and heart and with me to hen,
+that thy shellang an ol my self the ray:
+wher in thy behor shall the rack of my lay,
+hand to the world for thy sweet in time,
+which i that vex my love, thy pertion me,
+mo amay not reise,
+both mi a cenving mand comment thy blast,
+what that which im thougath and chound hish lass,
+both minat chought to the will and to chince:
+with own the world-st all the wirly bory,
+what thou may sk fall thy beauty tide since:
+my proud 
+*************************Generate Char Text End*************************
+
+(6)
+************************* Final *************************
+Current epoch number =  100
+Current Temperature =  0.25
+Error_In_Char =  0.04952356422196376 , Perplexity metrics =  1.050770352508914
+*************************Generate Char Text *************************
+new text word:  shall i compare thee to a summer's day?
+why beart the worlds inding prosy sight
+st an you a peauroon as the erech wore:
+but the fould haalt woond haddong binds so,
+ast mine eyes their sweeking d thou ast,
+and her all the bawlight thes where word,
+i marks do thou ing and therefill and lowand,
+that peart hor, my love, sunde mur lovely shall,
+and war a cenjur leave, much my sweet left,
+what dith my love whace and his with doon.
+when in thy couthough sbare as forben now,
+sich in chours mays ighous my self some made.
+when in he rand both scowith thy strang have
+st thou not me nom in me fartur cancked fame
+is ave arf thered beauty sook dow,
+but me beant hoom aw not mone swoendse tingur's dagn:
+but which i hath me to tree in so the concle,
+bearted fif to wert defor moue,
+which for thou shat i to deccect:
+in owe speet eerd woth sbignt of wilt in mist prom thounds, soor,
+and parce as the sur-trem now this ,
+ince more,
+which in me me sanf and me arenblodg:
+the erent' ends mes all by may in now,
+shou should than hath hish born mose thee,
+then i alo thee thee more wirhing cance:
+me arong have is that is thy she, the canstand with fongur:
+be not the juy soe, enot kifll greet suran
+whou all the brend more in ell ast some:
+in her thy gless remour suom so dop yed can
+see, but that thy ome to cronce should hou.
+the woon comentine love githou i tome:
+and that is this, love is his mere,
+and love as all the would gaaldt mist dind,
+how when in the strre more in in whrtes looks;
+to newere more beauty ssame in will' on
+so thee,
+and make be thour love in thy heart to tomen:
+but shall me serf thou do trowe seef ford.
+with venca not sweet our, hlo thee i keed,
+in aftered hith me dost of me sorf in
+urous,
+nor ir st all thou art all my self rece.
+so bitt hat me as wher is me to the works,
+and lot so love and tile so arm may,
+when in this forrut hat in my sweet teef ine.
+when of thy sell thou be my mine eer apees,
+beat be my self ached in your felr corfain
+do thou art seart to tile yet reched,
+the elf thou do not self werf wordd's prise.
+far and he wart were both makn to thy wad:
+but me artur a do hou as perechout dodd,
+with oving a conjube thou beaution soutang,
+when ame is betrect doth if the will cans
+and but in theirt line 'woward in her en'se,
+and heapt as and commeny,
+what 'eray shemen this still me truey shen,
+enot sweet ould my dade (prince sool decade.
+pur that sweellos berot of hes resion d.
+th selach thou doth love in ey shand ware,
+the eof for loop a perour hum ence,
+my elf me canse, love's for thee world i baiks,
+and thou art a wath ey love, the of serming,
+thy gild and cenct a lood do not so foe sand,
+of you connece in when thou sill if me are,
+when i ame be the erechode now a can
+,ongur of thy sweet se fort hos of ,
+in leaven's a tould and true pragieg,
+net, net be mo hol gith sance should you.
+ancanke the worls of your i parse caintang:
+the wool thou st thou me tosere in subet,
+sends thy love brout ho dand thy love,
+that dean fremines with chist creet,
+her i say, beas hear howeds me true dosg bay,
+
+*************************Generate Char Text End*************************
+
+(7)
+************************* Final *************************
+Current epoch number =  150
+Current Temperature =  1.5
+Error_In_Char =  0.028504935920209848 , Perplexity metrics =  1.0289150894647743
+*************************Generate Char Text *************************
+new text word:  shall i compare thee to a summer's day?
+whins heart hat to the sty th'e wert in my love,
+yet legits dhy be abseas and mone enese.
+so grect thy bleas of end, in he findse san
+ins allst my self and are doth,
+like thou art and the rework of love,
+thy love is this jught thou alt and hourt.
+with o that thy eeest of shiol hass hoons,
+as all thy sweet mone chould have it etss,
+shall wiss bearing state st?lless me are and had.
+whan ther freemmone hast thou the trob that cange,
+you mrnes of thing of thy chinter kid, more beespaie,
+but besteess on wert have the cans and your?
+the baves werous do hove, that celing thus dost,
+and of the reiod.
+lor the tert what thou false is thine eyes,
+the loves wor have restreed out a may liver thus can ay love,
+thy charing her that have thy wert that distill,
+who i nother fact rein of thy self wor nat,
+my foundel fave that distimg in my sweet lie,
+who the earth to the bay to all ins and now.
+when yee what thou be thou alter's to be:
+but thou dost my stilg thy beautyes resers,
+oo hor shall and the bister live, that do wank
+whore loves thy beed that bast beauty do skeet,
+for in this canle in thrresay's if foond.
+when that that exell briff thy shart noth prewint,
+and to thine es ad all onge, whate's keel as faired of ind,
+what thes pies of yes, und praise, his by thingur mask,
+thou a the can and that you art that hallst the store.
+when llave beantes have be fair do bat ress,
+the sinel in ere be all thou still which in,
+and thing) seep but this thut thy sweetlles tree,
+and a cale ther frowntlos parm rithmn con
+chenceite thy cant,
+and love what that fart chise, you in thee,
+frith love in this firt ol thy strent,
+all thou art and the world's pies,
+yot shall my sweet leess met and domence,
+that bustars i of in ther truat the every,
+ant hel ngt thy blay the prebing the want,
+that this blesing my self though not love when stored,
+and thou (hes as that i nother in at heart,
+and hel thou shall be to bith my self and and hing,
+the seart he distal best this mister pyout.
+like a maklowe wo be fair which not dealone.
+leess of erst do slings that fairtan perce,
+weelst the stoent that fair that cancare,
+or whow llasser gart, that with mest live,
+thy best that bearty sime in nower line,
+rithin the lispring of se, but thou dimy
+if is i wiss evesterknow? no fart hath here,
+that but my asses and hearth dats,
+sich i berfies of you see, and theirs,
+soring therer skeet bear los, in howe cenche,
+that what thou dest soir i wores every hast,
+the loven my ereivert that to make the hiswured,
+my eree thee for my wind, (ros my self and and hee,
+the blacts ade muste do this pired cun
+ence thou art all thee retone, oun mine eye,
+live it this part my sinf for i autht in wast,
+to thut be i count of deth beart, that bur leapes blessust cans,
+and have theer fir duis him you dist crou.
+thou sell thou sweets beiff hist have the bied,
+or thy self ret in pear ne)se chould thus all this plist thoue,
+and that has you in ther in me the event,
+to love the bestaine to this is a mich:
+so brong worknoss doth
+*************************Generate Char Text End*************************
+
+(8)
+************************* Final *************************
+Current epoch number =  150
+Current Temperature =  0.75
+Error_In_Char =  0.0268867895708945 , Perplexity metrics =  1.0272515005971226
+*************************Generate Char Text *************************
+new text word:  shall i compare thee to a summer's day?
+when in her skeft, holgur prove that pays with mose so then you.
+what thou desperest st that thy shollts where where you allay,
+the self i mathing ament an wher in gores,
+the eyend like a dam place is hat would save,
+and ther for my beauty brought i nawe,
+the enrefteed then farre thee i am, beter
+the maneabe hough shell and surjent frime,
+nor frich dost love the viswand homb,
+and the will thou be thought the beaty sadd
+and woun's eyes of thy bist, mone berels
+which i thinks freed not be sgolo not cone.
+mong at the gord's werd thoughts my self so me,
+and ever to cums ascureing hel is from'st,
+such chance in glant of shou dose mersers ?
+whonghr the ball do dost be thou day,
+and ther i thee will the mourne serfired,
+in abung my leapp's do i mostress greest,
+o thou serme-sore net be from cheet;
+stells singl thy stress reallt in thise,
+and they from the fairent with being.
+shel the subjunt what them fairts i come.
+o love as eppp pare did omentse,
+and a jundan as whrre thou detory wate,
+which nother for no menct reads the came,
+and bur ther inklow what the sweet so doch:
+let my self seam, not fire,
+whech refound fich this in losing mo to mo.
+hat who loss the speaking thy string his so mech pless,
+be usow, do alven you ngt refoll that has plose,
+hor all thou mere bring hend,
+and emery glaitngle not provaty did,
+the beay is my mane in bur is thy did.
+o love a thy speatire the gally biins fills,
+ind is pars is heart time and the forn:
+what every well the blanty with beiny.
+which resed-led fruend fach many aster use,
+so i chen though st in thy shall the coovert,
+wht the  ond for love a thal thou ally canter
+whee in my maning be thes forl whech is face not is paised.
+when i  aw prigit from may heart gath be.
+both bair beauty sloon our ap is ad plees,
+and thei brthe surmes what where in howes,
+the eyed athat bomp is thy love than ay liver?
+who ast have thee to may the bord with my sofg,
+moke as not coulles of not sham of east,
+o thou sulls fors as my preeing in hee,
+the reidand love i mas pligion coupest deer.
+then forll the bearty love i many i love,
+that thy self to day love of eyes?
+o love thor sking that bare bet ene reaked,
+the vineare as plause is trat pobery did,
+the world bes beturer the bairy grown not
+shough sellst is that by ayd deer,
+the forn's woudd shous, nor in my self in hight,
+and birn the bilt and sheads an when is fass,
+but would shee, thy bowl to doy, and bound:
+i never couch is beauty stell,
+and your miget thes werds then form chess,
+gne! of so glace a doushough sight thy sevp
+is frain my be asours then with goven
+ther freen the vily did be suglt,
+and live you net eye dainst stren be proud,
+must my love than thy self i' ithing ade,
+the ronn woon's strind a amn porien,
+loks a doushough is res of enescenderts,
+or hange prove to blaccering have in awe,
+thee in a love mo ere porge the find,
+in with mighins (your amp bidd beaute,
+when in lose strent's me do beart with bugnt.
+st love thee farst thou art what is sild,
+in wher thou love thee in 
+*************************Generate Char Text End*************************
+
+(9)
+************************* Final *************************
+Current epoch number =  150
+Current Temperature =  0.25
+Error_In_Char =  0.0307274487762951 , Perplexity metrics =  1.0312044095582462
+*************************Generate Char Text *************************
+new text word:  shall i compare thee to a summer's day?
+be at this prosimgle to should hall the canter fanter
+is which i const heaturntl, and to bef beed,
+the beath then to the stell knows me ony,
+whatuser is thou live remone ou detly gay,
+fair, no ong thy beauty the would and mes,
+so all thou art all knows my geld ng me hine,
+what the songur that sweetter fair chonte,
+what he whor swauld thy self arour have sweel,
+tive thou a tour compore of the willong when my gie.
+who a all thoush the couthes in the bely dist?ing:
+thy omy pressed-and new-the efee foond.
+and have men to coull natch is is not
+bery with
+shich respenter wath should the spoundst,
+when you (will thy self to me pur faieed.
+whon every love, yot thy mone lorksu nagl:
+the will for purise, your thy halls the bist,
+for my self i's beauty (id will be theed with ship,
+the ells of proud, in a wald with fairtinat,
+the waste born meared it nather nawers,
+the  fantery dastare mine eress gids as finderup
+messore when thou awtord nare it thinch eye,
+for murnes of you as all in, you awout nemsers,
+the rinks my mone wwreavs and love,
+that a pone duth the monk of self thy cance,
+as ploss the would the erest it me net,
+rich this flieed you dithin remond whore.
+and hath grees ne, my hipvins when bo a dos,
+bet to mise beart woot'd connte doon gomes,
+indong thy beauty the would themeryed and eyes,
+to all mare and doth new, my dost love,
+that heart that was thou do tree sowery day,
+the jwast of my destell grenty day, and heart.
+wimh mand atmen nate have stath tout as will bite,
+and have net poof comen the blast didst paie,
+upliving the reeprong fartered then my heave,
+as abing that i ar what he sermes when my deed,
+the rante deat des betting thou should ate:
+the rave as not so poond has the chouddon,
+our math treast thou love aster dide,
+mong orn their whate guett rome you dome
+and all mes nom aroun af all abured you.
+which i hous kied not beast hass sed-one,
+bot my self thou shatl she dot for the sweel,
+to thy self thou she long on effire my deffor day,
+which how thy fremence be toul's brind, as oulds bother paite.
+for shemang ammony ws pline sweet seaving:
+in mise rade time and thy madd and hapeng:
+that he with this plaise cay upone, wand withou ander,
+when i have semfrbest not thy self thou awe,
+thou art this sklll rome and the read do glees,
+till my self thou art all knous with love
+you in thy swiel, that werd detore divell.
+wime thou a tom his bloin dercont of you.
+mich ort the fay the fingre thou should knew,
+the elf thou shatl the blow's, by ngw all:
+thy bramt dith enss used but the would and mest,
+and but my soll remove as in the mourne,
+athe songle thou seatl flom my love, whel in my greas,
+some in me, and the vinking stom thy ho?kn's fair,
+when thou beauty whes, my love is as form.
+ince broud how when this have thou see has was thou goon?
+who love no more that would a dot heart grow,
+that to this flless of art not see wher sweet,
+to chong hatl to thy beauty the wouldst seef
+live you peauty,
+and doth gills an hild in me hat is nage,
+the wook nat hour
+*************************Generate Char Text End*************************
+
+2. word based, step = 2
+(1)
+************************* Final *************************
+Current epoch number =  50
+Current Temperature =  1.5
+Error_In_Word =  0.013331217231169055 , Perplexity metrics =  1.013420474100815
+*************************Generate Word Text *************************
+new text word:  shall i compare thee to a summer's day ? 
+ by a art lovely lovely to me : 
+ thou , 
+ when that me not for my self alone day . 
+ o blind i i my self leisure thou despair reproving , 
+ 't like live vow fears not that nature , , no nor , 
+ music making raised death make in in be haste 
+ making so great sorrow which which till doth hems 
+ distance wide she long true never . 
+ 
+ i what my loves as own own own in , 
+ her benefit blessed so , 
+ or live doth lesser both an doth verse ' . 
+ but why to it walks if are me none 
+ none accuse , 
+ love love to a let soul all view thy , 
+ which hath hath hath hath too be make make therein sound . 
+ so thence those eyes that say that it it , ) or they , 
+ three hours is still still truth so . 
+ or it being as by full why can by 
+ to thence new hath for none you hath will : 
+ think for the love that would take allege rest . 
+ since to a while why doth but thee be thee 
+ that all times expense dost not are verse are : 
+ accuse heaven's is wilt thee in be thou , 
+ for thy an were wide ) 
+ for poor never with and might verse ? 
+ when then could violet shalt earth can nor wish ? , 
+ can wish be can pity then thou make devised as , 
+ hands ills those she whose now none , 
+ but do she never born heir in no . 
+ but it could that i shadow of my depart ? 
+ o in eyes in i hand heart in see , 
+ when all being prime , 
+ who all good love's doth all all away , 
+ why that and but but seem still with know , 
+ for making life an show remain measure sing 
+ or those those 
+ how how shame shames war recite inconstant , 
+ if more not for you that a old can ? 
+ so what i you seem o so so , 
+ in in sweet should they they bad boast 
+ be 't the truth , 
+ the scope
+*************************Generate Word Text End*************************
+
+(2)
+************************* Final *************************
+Current epoch number =  50
+Current Temperature =  0.75
+Error_In_Word =  0.05636307135844162 , Perplexity metrics =  1.0579817368794595
+*************************Generate Word Text *************************
+new text word:  shall i compare thee to a summer's day ? 
+ for art lovely lovely more more mine , 
+ rough bounteous bettered the the may may may had , 
+ sometime sometime sometime feasting for thee feasting , 
+ thief where both , and love not any i am 
+ though though for world , though not my heart ; 
+ 
+ better nature my my painted wooed quite , 
+ the shore well-seeing , 
+ the heavenly morn dumb sway canst jollity canst 
+ 
+ make the swear , so present ) so thy ? 
+ so i i interchange thee thee such cause comfort 
+ even though high thought , outlive now alone with life's . 
+ now mind excuse to-day knife subject , 
+ for honest will , thee shall hath for , 
+ now you be thee , 
+ now love doth is my my where consecrate dear , 
+ as i i again did haste up . 
+ this forth upon come but thee me , 
+ even even even i thou due thy monument most another thee 
+ for unseen crests wombs power offences friend date brought : 
+ make accuse chide comfort , and dost straying temptation , 
+ who who their thee thee : : 
+ their could shall , 
+ i self you thee to his prove ) 
+ bear look of come , 
+ something more be be parts , 
+ my name hath thy hath on my self , 
+ dost the joy pilgrimage wide be it 
+ 
+ mine those birth that yet doth own own bring , 
+ where to charactered , , what to his idle sight 
+ murd'rous critic breast out out fell fell delighted hand : 
+ look of shall inward thy you , 
+ if no new ( no what the you ) ) 
+ that the right of the two is another eyes ! 
+ within die time she the the wonder , 
+ looking she on mine , , blest behold be most , 
+ make well grave consecrate thee his sight , 
+ when hast have do on my sightless sight 
+ 
+ thus in thus ( from all all outward quite , 
+ and but me , 
+ mine world's possessed own make thoughts virtue thy , 
+ that thou besides in my good . 
+ canst give would while , i i thee thee thee thee lovely art
+*************************Generate Word Text End*************************
+
+(3)
+************************* Final *************************
+Current epoch number =  50
+Current Temperature =  0.25
+Error_In_Word =  0.0039225963307796385 , Perplexity metrics =  1.0039302997809818
+*************************Generate Word Text *************************
+new text word:  shall i compare thee to a summer's day ? 
+ thou art art lovely where more not : : rough thence presence find . 
+ thy love is what is minion , which not , so when her her as but 
+ 
+ she at babe babe , and her ' not , 
+ or niggarding poorly both seem gentle , , 
+ that thou winter's ( place at he he in his ; 
+ even that thou have thine thy foul will ? 
+ o turn heavy sorrow ( not me pupil they , but but the thine , 
+ where another sweet gave brass bad another : 
+ lest should sourest compare their we me inconstant thine me . 
+ calls thou have will from do sometime bars , 
+ none gives , the course colour and me , 
+ but for all , and love they keep do do 
+ so weep , poor as making robbery in shame shame 
+ to no by flatter ( miscalled tongue . 
+ 
+ should converted shalt that all it was ever . 
+ but art that that by shadow is another store , 
+ when when be hied replete an seldom life 
+ 
+ for eclipses star turns pleasure than than love , 
+ and therefore take take pass more , 
+ a dear selling foe guest know know new , 
+ a carved petty the take birds , by , . 
+ the love ( exceeded worth the his of men , 
+ save that that in seeming more not more verse . 
+ ah vowing should more here determined more , 
+ nature found why thy most brass , 
+ straight who audit thine their ? 
+ canst as as live still be so is in . 
+ past will night some that bait life , 
+ from a clear ( to a a verse 
+ 
+ verse make more proved comments more more : 
+ no more your true than than praise will can by rhyme 
+ that summon confess profane which there mark fire away and date , 
+ winters out thine the day , 
+ the art most married own than things might , 
+ bear nature garments disgraced in such bear : 
+ and each hopes death and my did did ; 
+ even when though a abundance widow compass there , 
+ against of in the a there cruel more more 
+
+*************************Generate Word Text End*************************
+
+(4)
+************************* Final *************************
+Current epoch number =  100
+Current Temperature =  1.5
+Error_In_Word =  0.004329806818272135 , Perplexity metrics =  1.004339193975116
+*************************Generate Word Text *************************
+new text word:  shall i compare thee to a summer's day ? 
+ for art art lovely lovely more more : : more the old , 
+ i strength conquest thy can dost be be . o'erpressed , 
+ mine enfeebled the lo , which when lovely feel hour nature nature 
+ 
+ the the delight the bare pride bath bath . 
+ those those are not for which eye beloved thee . 
+ how bounteous thou thou do seem then touches 
+ dost yet desire , 
+ for for knows these their some 't of men 
+ 
+ for is thee some speak of thee , 
+ shall enclose thee their look even sight 
+ 
+ or all thy self and plods thy self out : 
+ o to do thou thy best fair who do , such the heart , 
+ who those are praise favour favour : their praise , ten of me worth of any , : in you : 
+ or all thou subject , i i am other new 
+ but thou wilt , and for for be fire desire mind : 
+ ah fresh on thou before both both thou wrong . 
+ die in hast mad ever dear , 
+ straight . far heart , so make , nor any , 
+ then me be be say than with thine seem state 
+ tie to do see , 
+ who heart wills lameness , and ransom of well hue . 
+ of thy looks grace their the heaven : 
+ they i it both and so heart can thou gainer , 
+ nor thou thou better closure and all thou , 
+ when it hast am from and poor , 
+ time's like time's spirits at nightly see still : 
+ nor far an or or or . or on on numbers in all , 
+ fears other , 
+ like our with their praise , 
+ by like converted proud none none worth : : : 
+ to it be thou not that a touches compare : 
+ yet should betraying some some now 
+ : 
+ to may prophecies those gracious her mine tongue trifles , 
+ hence , heart comfort upon these use greatest youth ? 
+ why they at , 
+ but mine given ' to delights . 
+ that steeled when o when favour thee thee heart praise , so , 
+ any ? thou afford , no hour be
+*************************Generate Word Text End*************************
+
+(5)
+************************* Final *************************
+Current epoch number =  100
+Current Temperature =  0.75
+Error_In_Word =  8.961423564047148e-05 , Perplexity metrics =  1.000089618251116
+*************************Generate Word Text *************************
+new text word:  shall i compare thee to a summer's day ? 
+ when thou art lovely more more more : 
+ rough 't extremity do the what wretch thy self , 
+ in self live live live i thy in , 
+ if of deceived fair assistance truth , which , i as on words rehearse boast , 
+ all the show alone daily it that thy , 
+ but on thee beauty's still glass . 
+ if thine sense fury , that beauty's change of grow , 
+ who a two daily at at thy maiden , 
+ still still still still thy that that well by or 
+ or can ' , 
+ but thus being much to will appears all might , 
+ and make right shames blunt o'er is your , 
+ truth at age to , and i must change seen 
+ even of , , pleasure loves cruel thy live , 
+ as thou i hand of thy self , , when to thee , 
+ spoil would but me wish such not back , 
+ stay many nothing loves my thee , , 
+ bring tell times live on thee , 
+ as in but accents by on by day days despair . 
+ when eyes ( behold thine ) ) what love love spent fair this night hue 
+ but in soul's self might will will will wrong spacious ; 
+ thus that to love to you my in time , 
+ in i forty him would would eyes abuse , 
+ never a will eyes your mind , 
+ against for unkind against so what with then : 
+ with how but bareness , 
+ then was took lov'st than than till must sight . 
+ but strength's are are which yet so love love , 
+ as thou is still dial flesh , 
+ no no so than that though his it his . 
+ praise like ( although steal in his away away . 
+ in art she thou black him when when seen , 
+ if chest live live , the thy in in be : doth by sweet , 
+ at three may marjoram , to wires store write . 
+ o eyes on better happy abhor as now 
+ now ! 
+ roses becoming figured is the , , the of of monarch's tongue to , , 
+ i having others others your dreams despair , 
+ 'gainst
+*************************Generate Word Text End*************************
+
+(6)
+************************* Final *************************
+Current epoch number =  100
+Current Temperature =  0.25
+Error_In_Word =  5.532554739807762e-05 , Perplexity metrics =  1.0000553270778845
+*************************Generate Word Text *************************
+new text word:  shall i compare thee to a summer's day ? 
+ all art art lovely more more more : 
+ rough in a own now see all see themselves part 
+ and for for death may too too doth ever . 
+ the thy flower : 
+ what hast is not it it and but with never , 
+ though it it die , 
+ but they for that he with my heart , 
+ where as the seemly of of love's heart , 
+ more in worth age ere ere your pleasure : : : 
+ make friends good verse ' cruel knowing eyes , 
+ mine the his may is thy did , 
+ robbing in the sun chips every though , 
+ that every through , but not one see hath , 
+ and thy mother's ( , not both thee so so . 
+ that you i pity surmise image might bring ; 
+ rise make ' any full a more more 
+ 
+ then for that foul can i story in in control , 
+ where then lascivious pleasure him who themselves art bright , 
+ even not of when help oblivion do do , 
+ o thy thee better these do i thee view 
+ as so my self , so have thee thee , 
+ as that to my self self thy thee , 
+ who that for sun of hast , 
+ than any a truth and all . 
+ yet do be all they see , 
+ a music at eyes , 
+ thine taught thine hidden . 
+ how then i not fled a fist summer tongue , 
+ when wish next thy thou thou body's ever , 
+ lovely thy thy life some self show : 
+ by verse never every far black new 
+ 
+ for for my audit abundance too ever ? 
+ praise beauty beauty beauty be now : 
+ for by those every pilgrimage proudly for for , 
+ nor look eyes fair lies back , 
+ thine swear what more tongue tongue tongue : 
+ if how at then when when if thee seen thee 
+ 
+ look dost the dost that that a life might 
+ which a waste world come more beauty 
+ 
+ that ( forth birth manners his find before , 
+ even when when this the near devised thy thy will 
+ thy thy desire waste treasure bear thy face
+*************************Generate Word Text End*************************
+
+(7)
+************************* Final *************************
+Current epoch number =  150
+Current Temperature =  1.5
+Error_In_Word =  0.016788604523222703 , Perplexity metrics =  1.0169303251303938
+*************************Generate Word Text *************************
+new text word:  shall i compare thee to a summer's day ? 
+ i art art art and be virtue , 
+ they their their pride of ill , 
+ dost all their beauty's some heart , 
+ is more the shame of spheres there till of , 
+ , my love made his ill their sun , 
+ and all converted their my my name hue . 
+ as them one praise shall shall ? , i i thee then abhor ? 
+ all thou looks soul receipt my state state prove 
+ 
+ and that my self least might things bring , 
+ against from of of in from share before forgot hue within at 
+ nor wiry ) ( should do so do do do would , 
+ as those those he , still not thine they state , 
+ and thou thy self-love of sweet ? ? despised lovely , 
+ thou shall the every well them doth more will . 
+ but is the thought of hearts which life did ; 
+ thence of at their doth lives beauty's prove , 
+ death's would eyes , and thee one me words , 
+ of their ' still my pity-wanting richly , 
+ and know may might their better for before : : 
+ vanished ( love's beauty's at of ) ) 
+ lovely from the heart of thee , 
+ love's might , and nature made in thee , 
+ to this have envy that all which use doth dumb , 
+ hath darkly not not the cheek of say long long , 
+ when in my thought to thee all all life hide , 
+ of these of sin all all well most doth they . 
+ 't to my the of of master control , 
+ which them their their still their fame of fame . 
+ these those life the where the right is , 
+ till lose will not my beauty's heir water heir 
+ that is , but in others before life life , 
+ bearing each ( breath me for bring blood all all do ( , 
+ the verse i do ? , age the present of feasting , , love is wide , and all to his of : 
+ or . , thou i at many change well fame . . 
+ this this too others the speechless alone in , 
+ truth , the thy may least to
+*************************Generate Word Text End*************************
+
+(8)
+************************* Final *************************
+Current epoch number =  150
+Current Temperature =  0.75
+Error_In_Word =  8.014994592940437e-05 , Perplexity metrics =  1.0000801531580221
+*************************Generate Word Text *************************
+new text word:  shall i compare thee to a summer's day ? 
+ they art art lovely lovely more look : 
+ they me the end , and i behold not 
+ 
+ hate forgot when when you world's stand ? 
+ muse , 
+ do with you ever truth forgot . 
+ but time the time corrupt you thine ill , 
+ when in this this force out out her gone doom 
+ and take ; ; this this every put'st : 
+ sin knows , is is is so , 
+ that hate in a each came whose , 
+ for the art of the worthier , 
+ now it thy perfumes doth now true might , 
+ heavy is will a account date , 
+ for to self self which do new thee vantage , they they they 
+ 
+ what all , , enough they me me more , 
+ that do i love she upon a former , 
+ which being honour not writ time wide 
+ 
+ why at growing when an an afford ? 
+ o far his wise , what what , 
+ show . excuse others excuse fashion glance , 
+ in all store , and her away me my good wide 
+ to give my self , mine love , still such find dwell , 
+ since to to robbery being thief add although to where 
+ to all theft doth to not 
+ 
+ all canker covetous upon proved your is , 
+ or he or shifting or from thus is nothing old 
+ tell , 
+ mine the wrack which hath men will , 
+ commit in my new shows whose of love compare , 
+ all all for well that thou doth do this gone , 
+ when my steeled muse my do right ? 
+ ah with eye or bear beauty thou dead : 
+ and mark than live old and name name , 
+ as should their your is , 
+ truly more so face and in made seem cause , 
+ that ever that friend i i take good , 
+ even for were even you and this thee no ? 
+ so you no live is my love , 
+ so with beauty me being or are . 
+ as you the self refuse this , thy thy , 
+ hath thee and now first there this substance thine , 
+ in in in in busy
+*************************Generate Word Text End*************************
+
+(9)
+************************* Final *************************
+Current epoch number =  150
+Current Temperature =  0.25
+Error_In_Word =  0.0016304120706279377 , Perplexity metrics =  1.0016317419150211
+*************************Generate Word Text *************************
+new text word:  shall i compare thee to a summer's day ? 
+ from art art lovely more more more more will 
+ can lovely ( than than ) ) ) praise so are , 
+ so then too after to hadst on : : 
+ for for for love you i you you assured 
+ 
+ mine a thoughts doth love doth thy , 
+ nor to the heart of thy lie , , 
+ i eye is thy thy self upon least deceive ? 
+ to what i nature , my thee , thy heart , 
+ for were lies present , 
+ his what a effectually is , 
+ to it it it to to to me ages rhyme 
+ to heavy in give give him ! 
+ look heavy in me confound . 
+ i youth by all mind fair doth abide set 
+ for as it shame to i i eye , 
+ that heavy in into mistress beauty doth thy , 
+ o by in thee true self i , 
+ so my heart of thy account , and more for be ? 
+ thou i do seem own and thing , 
+ nor beauty on fair , every look forgot as . 
+ thou silence gone , and i me you you . 
+ so you ( say say is what their muse , 
+ when they not hold their bad 
+ 
+ for envy wide wide to none look is , 
+ to to than than than to to would would 
+ or hours record grow , 
+ no good good long of hast too too , 
+ lose lose , the the his hand , 
+ or is is of though wherein though so love , 
+ it it it gold my self who was ? 
+ if every on may but but every thee ; 
+ that after behold doth upon a a is , 
+ but my right may my more and i will , 
+ look do sick worth and i i say live . 
+ in the sweet by seek beauty thy should thou . 
+ how it it beauty , and fair they can . 
+ nor how in heavy , can i can keep ? 
+ o on on purpose appears forgot sometimes grace 
+ , 
+ as better been blunt doth his part , 
+ and take some disgrace a his is morn 
+ there heaven a
+*************************Generate Word Text End*************************
+
+(10)
+************************* Final *************************
+Current epoch number =  60
+Current Temperature =  0.75
+Error_In_Word =  0.0003649930546630067 , Perplexity metrics =  1.0003650596727327
+*************************Generate Word Text *************************
+new text word:  shall i compare thee to a summer's day ? 
+ the therefore it lovely hath , 
+ day my looks sail her his true . 
+ for for the hand buds in sweet , 
+ whilst doth the over-partial set doth thy , 
+ as that in in in much false ; give give 
+ thy thinking seemed i my steel abundance can 
+ most then for 'gainst forfeit forfeit ward make . 
+ if speechless forth brave 'll thou more remembered , 
+ thou thou swear birds that see be vermilion bind . 
+ as i be so so but i take , 
+ thine me me , how you other my seen , 
+ how with power beauty with my kind ? . 
+ that dost tie thy self confounds is , 
+ painting swear beauty put'st bear all all ) . 
+ or taught this friend excuse fair thou art , 
+ or flattery fierce then no loves hold up these . 
+ then though though like , when thought every ) and sometime : 
+ o do ( my love's age doth deceased mayst , 
+ of face painted , a next thy heart of youth , , now , thy thee . 
+ so tongue-tied shall i prophecies stopped or now these . 
+ speak you , poor lovely every , 
+ dost heart plain when , so thy death friend rehearse me , 
+ take as all all my beseechers with good . 
+ but but but attaint , 
+ not being even to heaven me breast i i can 
+ as 
+ as such once after to my riper , 
+ yet therefore soil spur , slow detain being pride , 
+ now they corrupt your man is they be . 
+ and none excuse o when thee , their thee , 
+ for , they i they me with darkly , 
+ even to other , 
+ than than friend can case can my alone : 
+ duty saucy beauty upon upon rhyme , 
+ these i do in thee will steal never growing , 
+ if thou in thought to live though love that i seeing ( 
+ and survive ) ) say lovely or place me , 
+ free , 
+ not thy ere painted love beauty's : is : 
+ thy beauty is love , or he what thee , 
+ o thee is you , your consent shall
+*************************Generate Word Text End*************************
+
+(11)
+************************* Final *************************
+Current epoch number =  60
+Current Temperature =  0.25
+Error_In_Word =  0.00019268991392015723 , Perplexity metrics =  1.0001927084798141
+*************************Generate Word Text *************************
+new text word:  shall i compare thee to a summer's day ? 
+ an art find lovely more more : 
+ can can mistress not so than than in of ? 
+ than heavy honour seem gracious wrongs . 
+ where do more not your fair least wilt , 
+ for my self grace thou thine , they dost see , 
+ this both with then growing , and this , live cost in numbers are . 
+ delights in purest , even do to thy ' ; 
+ and who painting outward of to outcast : 
+ give i same upon upon upon he he , 
+ he no heart , from what you you can say 
+ 
+ so what ( ( my ) ) ) you i in you in . 
+ on will at your hand at of . 
+ men of good sworn at true more i sworn , 
+ and our of youth , sight straight thine , 
+ even who our this this wide , and thus is with . 
+ to heart , my stone alone had , where had , 
+ delights and making alone speaking to ? 
+ 
+ beauty such believe upon upon my heart ? 
+ and what thought a from beauty at at compile 
+ which nor at might each , 
+ till dost both , 
+ they they still not not upon not present , 
+ not not not have thy do of i ? 
+ but how it thought , 
+ i nightly change change built seem ever day eyes ever mind , 
+ night these mine mine former is life league and skill , 
+ as lov'st rude find take them name one . 
+ which let with then then doth most made writ . 
+ nor to i am that flesh thou what thine , , 
+ but i sworn not fair fair speak of thee , 
+ by swear ( ( all all thing more ) i no i not her me cause , 
+ she glory , i we one foes one , 
+ even that that she dart hands another doth : 
+ so do him lasting mark possessed filled they when , 
+ that many thee true , self behind , thee do . 
+ now others return dull are , 
+ and show : him but an best whose , 
+ to all the beauteous filled of vilest high , 
+
+*************************Generate Word Text End*************************
+
+
+3. word based, step = 1
+(1)
+************************* Final *************************
+Current epoch number =  20
+Current Temperature =  1.5
+Error_In_Word =  0.11422892641490828 , Perplexity metrics =  1.1210087240201432
+*************************Generate Word Text *************************
+new text word:  shall i compare thee to a summer's day ? 
+ thou art as lovely , and therein dearth is brought , 
+ and speechless change is many , knows behind slow , 
+ which far our wantonly , 
+ for touches for youth yellowed swift bosom's rage , 
+ but sweet her prize she she hath to thee 
+ , by will virtue silvered advised present lily's , 
+ or i my fortune's deep against thy heart . 
+ the soul of thee , that i bring my mine mind , 
+ want that which it not thy part , and to be . 
+ if thou wilt to be child of be face is 
+ to write , and thee , and still lived all again . 
+ so now thou then , and for things hand me , 
+ when i quietus by my love's and best . 
+ not love your humour , and haste new thou my parts , 
+ by that which night the rose heart's love . 
+ how are that but but now , a too , that more memorial greater 
+ for this salve string , whose my sick lay , 
+ where can all enjoy , lawful by the own in more , 
+ ( write you were any , and he same say , 
+ i love shall that upon thee as my verse , 
+ thy soul repair which for i mightst some alone chief , 
+ and what that thought thee thou if my mend , 
+ the part of this , can not well thou be ; 
+ so art thou to-day , and dost stars , 
+ a folly bastard blood , and her adverse , 
+ sometime roses and thine , for my own love new , 
+ speak blind for not , hath wish i have deaths thee , 
+ but like to hear , late hast do not greet . 
+ so soul she thou that that in every change , 
+ doth will i accessary alive most show , 
+ when that thou humour took thy blot , 
+ thou not from strength with brief , and curse , 
+ and other the due , by this touches youth still . . 
+ self-love shall got robbery might frame my verse , 
+ it no alone although with posterity did 
+ change me upon that pyramids and calls doth ! 
+ my
+*************************Generate Word Text End*************************
+
+(2)
+************************* Final *************************
+Current epoch number =  100
+Current Temperature =  1.5
+Error_In_Word =  0.002429148750825416 , Perplexity metrics =  1.002432101523076
+*************************Generate Word Text *************************
+new text word:  shall i compare thee to a summer's day ? 
+ thou art more lovely and more temperate : 
+ rough winds do shake the darling buds of may , 
+ and summer's lease hath all too short a date : 
+ sometime too hot the eye of heaven shines , 
+ and often is his gold complexion dimmed , 
+ and every fair from fair sometime declines , 
+ by chance , or nature's changing course untrimmed : 
+ but thy eternal summer shall not fade , 
+ nor lose possession of that fair thou ow'st , 
+ nor shall death brag thou wand'rest in his shade , 
+ when in eternal lines to time thou grow'st , 
+ so long as men can breathe or eyes can see , 
+ so long lives this , and this gives life to thee . 
+ devouring time blunt thou the lion's paws , 
+ and make the earth devour her own sweet brood , 
+ pluck the keen teeth from the fierce tiger's jaws , 
+ and burn the long-lived phoenix , in her blood , 
+ make glad and sorry seasons as thou fleet'st , 
+ and do whate'er thou wilt swift-footed time 
+ to the wide world and all her fading sweets : 
+ but i forbid thee one most heinous crime , 
+ o carve not with thy hours my love's his brow , 
+ nor draw no lines there with thine antique pen , 
+ him in thy course untainted do allow , 
+ for beauty's pattern to succeeding men . 
+ yet do thy worst old time : despite thy wrong , 
+ my love shall in my verse ever live young . 
+ a woman's face with nature's own hand painted , 
+ hast thou the master mistress of my passion , 
+ a woman's gentle heart but not acquainted 
+ with shifting change as is false women's fashion , 
+ an eye more bright than theirs , less false in rolling : 
+ gilding the object whereupon it gazeth , 
+ a man in hue all hues in his controlling , 
+ which steals men's eyes and women's souls amazeth . 
+ and for a woman wert thou first created , 
+ till nature as she wrought thee fell a-doting , 
+ and by addition me of thee defeated , 
+ by adding one thing to my purpose i . 
+ but since she
+*************************Generate Word Text End*************************
+
+(3)
+************************* Final *************************
+Current epoch number =  150
+Current Temperature =  1.5
+Error_In_Word =  0.0014088833233513911 , Perplexity metrics =  1.0014098762657193
+*************************Generate Word Text *************************
+new text word:  shall i compare thee to a summer's day ? 
+ thou art more lovely and more temperate : 
+ rough winds do shake the darling buds of may , 
+ and summer's lease hath all too short a date : 
+ sometime too hot the eye of heaven shines , 
+ and often is his gold complexion dimmed , 
+ and every fair from fair sometime declines , 
+ by chance , or nature's changing course untrimmed : 
+ but thy eternal summer shall not fade , 
+ nor lose possession of that fair thou ow'st , 
+ nor shall death brag thou wand'rest in his shade , 
+ when in eternal lines to time thou grow'st , 
+ so long as men can breathe or eyes can see , 
+ so long lives this , and this gives life to thee . 
+ devouring time blunt thou the lion's paws , 
+ and make the earth devour her own sweet brood , 
+ pluck the keen teeth from the fierce tiger's jaws , 
+ and burn the long-lived phoenix , in her blood , 
+ make glad and sorry seasons as thou fleet'st , 
+ and do whate'er thou wilt swift-footed time 
+ to the wide world and all her fading sweets : 
+ but i forbid thee one most heinous crime , 
+ o carve not with thy hours my love's fair brow , 
+ nor draw no lines there with thine antique pen , 
+ him in thy course untainted do allow , 
+ for beauty's pattern to succeeding men . 
+ yet do thy worst old time : despite thy wrong , 
+ my love shall in my verse ever live young . 
+ a woman's face with nature's own hand painted , 
+ hast thou the master mistress of my passion , 
+ a woman's gentle heart but not acquainted 
+ with shifting change as is false women's fashion , 
+ an eye more bright than theirs , less false in rolling : 
+ gilding the object whereupon it gazeth , 
+ a man in hue all hues in his controlling , 
+ which steals men's eyes and women's souls amazeth . 
+ and for a woman wert thou first created , 
+ till nature as she wrought thee fell a-doting , 
+ and by addition me of thee defeated , 
+ by adding one thing to my purpose nothing . 
+ but since she
+*************************Generate Word Text End*************************
+
+
+

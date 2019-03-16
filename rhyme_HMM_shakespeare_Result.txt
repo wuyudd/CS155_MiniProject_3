@@ -1,0 +1,371 @@
+rhyme HMM shakespeare Result
+
+Has runned the following parameters:
+num_hidden_states = [5, 8, 10]
+iterations = [50, 100, 150]
+
+Total: 9
+
+
+1. 
+Current number of hidden states =  5
+Current iteration times =  50
+
++++++++++ Current Poem Start! ++++++++
+of eyes thou pity your love victor live
+i desperate thy his to the mortal be
+take have pierced have kind man large nothing give
+benefit open pity-wanting me
+in substance big nor since i mortal hate
+day mercy taker best well me of do
+this may for in my blame they watch thy state
+those hold you images i no to too
+thou worthy that abysm alack content
+in was where niggard slain wherefore and bold
+not and as are is that joy struck day spent
+yet flattered no frequent with the behold
+others alone so shall fool all in still
+old death that who's what tongue is world soon will.
++++++++++ Current Poem End! ++++++++++
+
+O_mat:
+///State =  0 , top N prob obs:  ['the', 'i', 'my', 'thy', 'and', 'thou', 'that', 'a', 'is', 'me', 'thee', 'your', 'but', 'you', 'not'] ///
+///State =  1 , top N prob obs:  ['day', 'heart', 'ill', 'age', 'come', 'away', 'night', 'part', 'woe', 'state', 'praise', 'time', 'new', 'lie', 'dead'] ///
+///State =  2 , top N prob obs:  ['in', 'for', 'that', 'love', 'as', 'with', 'when', 'all', 'not', 'is', 'on', 'if', 'be', 'no', 'by'] ///
+///State =  3 , top N prob obs:  ['to', 'of', 'the', 'and', 'me', 'a', 'thee', 'his', 'in', 'my', 'be', 'make', 'give', 'not', 'out'] ///
+///State =  4 , top N prob obs:  ['of', 'and', 'to', 'my', 'do', 'by', 'self', 'from', 'will', 'be', 'which', 'so', 'it', 'shall', 'own'] ///
+
+A_mat:
+Current state =  0 , Transition:  [(0.7527425707945852, 2), (0.22819108924535242, 4), (0.01069885379510203, 3), (0.008367486164958027, 0), (1.0002952713583812e-15, 1)]
+Current state =  1 , Transition:  [(0.544491784497885, 4), (0.4534286842684179, 0), (0.002079309141947707, 3), (2.2209175421113986e-07, 2), (1.1304280714647274e-21, 1)]
+Current state =  2 , Transition:  [(0.7277457103785497, 0), (0.2722522920699657, 4), (1.996588068380758e-06, 3), (9.59624109593135e-10, 2), (3.792486576989869e-12, 1)]
+Current state =  3 , Transition:  [(0.7872012697343439, 3), (0.1496997521212908, 0), (0.06290377355478238, 1), (0.00012952164295430198, 4), (6.568294663202481e-05, 2)]
+Current state =  4 , Transition:  [(0.7691164141190355, 0), (0.14886544124914677, 1), (0.08197637907120131, 2), (2.8496305872336085e-05, 4), (1.326925474688583e-05, 3)]
+
+2.
+Current number of hidden states =  5
+Current iteration times =  100
+
++++++++++ Current Poem Start! ++++++++
+infant's so death scythe true i truly see
+it not this sometime this thorns lines mother
+face jaws to a dateless west me the be
+eternal self but of that another
+power by much see that this and the the part
+welcome hear if one now to sympathized
+forgetful waves services self desert
+shifting lap is sickness bide shade devised
+will your receiv'st youth treasure do exceeds
+well art my my have art being his lover
+thee live he place beyond shall love shall deeds
+dead thy my good nor eyes truth know cover
+were eyes waste o now love's bears beauty thee
+more thrice did as of to silence in me.
++++++++++ Current Poem End! ++++++++++
+
+O_mat:
+///State =  0 , top N prob obs:  ['and', 'the', 'love', 'in', 'which', 'heart', 'more', 'not', 'mine', 'self', 'be', 'will', 'make', 'on', 'as'] ///
+///State =  1 , top N prob obs:  ['the', 'and', 'me', 'but', 'thee', 'so', 'not', 'it', 'o', 'by', 'you', 'thy', 'that', 'thine', 'him'] ///
+///State =  2 , top N prob obs:  ['sight', 'part', 'away', 'decay', 'state', 'days', 'me', 'brow', 'lie', 'end', 'woe', 'alone', 'delight', 'prove', 'gone'] ///
+///State =  3 , top N prob obs:  ['my', 'i', 'to', 'of', 'thy', 'that', 'a', 'thou', 'and', 'his', 'love', 'your', 'you', 'this', 'doth'] ///
+///State =  4 , top N prob obs:  ['in', 'with', 'for', 'is', 'of', 'to', 'when', 'thou', 'and', 'from', 'be', 'that', 'all', 'so', 'if'] ///
+
+A_mat:
+Current state =  0 , Transition:  [(0.9999046951165544, 3), (9.530488344293036e-05, 0), (8.677487250467806e-17, 1), (4.5260341214970155e-18, 4), (1.990026449600222e-38, 2)]
+Current state =  1 , Transition:  [(0.5103432541852574, 0), (0.48965641395936377, 4), (3.3108944318214096e-07, 1), (7.659362679508167e-10, 3), (7.425197779359914e-60, 2)]
+Current state =  2 , Transition:  [(0.93095568125667, 3), (0.06904431874333035, 4), (5.251635883443576e-20, 1), (4.877525782964564e-25, 0), (5.082319293767233e-69, 2)]
+Current state =  3 , Transition:  [(0.5014029564669623, 3), (0.4985323767026994, 4), (6.466682063348722e-05, 0), (9.703504835862317e-12, 1), (5.842068295786469e-31, 2)]
+Current state =  4 , Transition:  [(0.6707468166869217, 1), (0.32925318331302783, 0), (4.676133258431897e-14, 4), (7.662196378466694e-15, 3), (7.086437405194745e-52, 2)]
+
+3.
+Current number of hidden states =  8
+Current iteration times =  50
+
++++++++++ Current Poem Start! ++++++++
+argument she day desire i never
+at heart be name our i reckoned hours
+which desire i not of only fever
+best before time's for the form should fair flowers
+forget nor ripe heart and may answer cured
+sweet friend is thou adverse flowers lives be
+born clean trespass forsake my assured
+all ink sweets gathered her and alone me
+of thy may works why i the death your mud
+hounds my general of that but which looks
+those art ink each bosom retention bud
+i sweet please i and be thought will be hooks
+should faring where the art a thy did one
+strong of hadst on mock nights for i spites loan.
++++++++++ Current Poem End! ++++++++++
+
+O_mat:
+///State =  0 , top N prob obs:  ['is', 'i', 'not', 'that', 'on', 'eyes', 'still', 'as', 'thee', 'shall', 'eye', 'now', 'can', 'at', 'own'] ///
+///State =  1 , top N prob obs:  ['be', 'doth', 'thee', 'have', 'me', 'see', 'not', 'live', 'with', 'can', 'upon', 'night', 'well', 'youth', "'t"] ///
+///State =  2 , top N prob obs:  ['that', 'in', 'and', 'not', 'for', 'all', 'with', 'as', 'when', 'by', 'have', 'this', 'what', 'love', 'from'] ///
+///State =  3 , top N prob obs:  ['love', 'self', 'in', 'than', 'heart', 'make', 'one', 'fair', 'if', 'thee', 'beauty', 'but', 'show', 'life', 'thought'] ///
+///State =  4 , top N prob obs:  ['me', 'mine', 'and', 'do', 'thee', 'thine', 'but', 'you', 'which', 'love', 'it', 'beauty', 'then', 'when', 'art'] ///
+///State =  5 , top N prob obs:  ['of', 'and', 'the', 'i', 'to', 'thou', 'a', 'my', 'with', 'that', 'but', 'is', 'in', 'me', 'thy'] ///
+///State =  6 , top N prob obs:  ['my', 'thy', 'to', 'the', 'your', 'in', 'his', 'so', 'be', 'sweet', 'more', 'are', 'a', 'her', 'i'] ///
+///State =  7 , top N prob obs:  ['sight', 'days', 'decay', 'woe', 'end', 'brow', 'lie', 'spent', 'way', 'delight', 'pride', 'prove', 'stay', 'seen', 'ill'] ///
+
+A_mat:
+Current state =  0 , Transition:  [(0.6929355027088201, 4), (0.3070599868718272, 3), (4.062880439078802e-06, 6), (2.226033390261177e-07, 2), (1.8400703211852707e-07, 5)]
+Current state =  1 , Transition:  [(0.8382097716906095, 0), (0.13395300796121462, 3), (0.023924458601548574, 5), (0.003737537861215719, 4), (0.00016596724956124257, 1)]
+Current state =  2 , Transition:  [(0.6138898479882359, 5), (0.27052849172563764, 4), (0.05880079702491151, 1), (0.030726290201645367, 0), (0.025420191909822976, 2)]
+Current state =  3 , Transition:  [(0.9967942284827839, 6), (0.0032057696095195405, 5), (1.8906342930422896e-09, 2), (9.728230171427178e-12, 3), (6.304614030085922e-12, 1)]
+Current state =  4 , Transition:  [(0.8188629154099087, 5), (0.17884802345921808, 2), (0.0022885667043486915, 3), (2.774194093067187e-07, 6), (2.065000225011966e-07, 4)]
+Current state =  5 , Transition:  [(0.48588455117938073, 2), (0.2968951039334803, 3), (0.19288550952807296, 0), (0.023802744837647424, 5), (0.0004017758378044354, 1)]
+Current state =  6 , Transition:  [(0.4694635549031437, 2), (0.40132786052737063, 5), (0.09760775506243487, 1), (0.02661519835129189, 0), (0.0049110056196910576, 6)]
+Current state =  7 , Transition:  [(0.7754429877709416, 6), (0.20968553761031059, 1), (0.008365187376068183, 7), (0.0065062872426019805, 5), (4.695665995142418e-14, 3)]
+
+4.
+Current number of hidden states =  8
+Current iteration times =  100
+
++++++++++ Current Poem Start! ++++++++
+my pay yours store let did not i denied
+and sweet the ambush swift-footed and chest
+nor to gold so most most patent my hide
+better loving flowers a heaven breast
+of gift not wretched pay his to grow it
+not and in womb laid hours will do will
+distempered age is she should that part it
+i not if boy yet in his is this ill
+fair hardest red truth a or still trimmed most
+but of good if but grant a triumph all
+still so nor seemed an greet eye my i boast
+state in i foul those but hold you than call
+garments eye shadow controlling lest day
+the which hues doth of face remote self stay.
++++++++++ Current Poem End! ++++++++++
+
+O_mat:
+///State =  0 , top N prob obs:  ['of', 'be', 'hand', 'mistress', 'pride', 'days', 'pleasure', 'thine', 'part', 'sight', 'day', 'their', 'life', 'make', 'stand'] ///
+///State =  1 , top N prob obs:  ['i', 'thou', 'not', 'and', 'so', 'that', 'but', 'thy', 'love', 'do', 'self', 'when', 'you', 'as', 'have'] ///
+///State =  2 , top N prob obs:  ['to', 'and', 'of', 'my', 'with', 'which', 'thy', 'in', 'doth', 'by', 'your', 'is', 'all', 'world', 'for'] ///
+///State =  3 , top N prob obs:  ['my', 'and', 'thy', 'me', 'thee', 'is', 'be', 'this', 'their', 'more', 'that', 'mine', 'which', 'or', 'her'] ///
+///State =  4 , top N prob obs:  ['in', 'to', 'with', 'of', 'all', 'love', 'by', 'but', 'for', 'from', 'a', 'and', 'on', 'make', 'as'] ///
+///State =  5 , top N prob obs:  ['show', 'away', 'spent', 'see', 'prove', 'seen', 'stay', 'know', 'alone', 'old', 'rhyme', 'gone', 'free', 'lie', 'might'] ///
+///State =  6 , top N prob obs:  ['heart', 'eyes', 'all', 'eye', 'thine', 'for', 'it', 'fair', 'pen', 'time', 'state', 'there', 'end', 'will', 'a'] ///
+///State =  7 , top N prob obs:  ['the', 'of', 'that', 'a', 'his', 'for', 'me', 'thee', 'and', 'this', 'one', 'on', 'love', 'no', 'or'] ///
+
+A_mat:
+Current state =  0 , Transition:  [(1.0, 2), (9.16346756732684e-22, 3), (2.910708791877279e-37, 6), (2.0742607396654594e-41, 4), (4.949190830129658e-42, 7)]
+Current state =  1 , Transition:  [(0.667887177649867, 1), (0.3060811532952309, 3), (0.026031669054903447, 2), (1.1715383045642162e-18, 4), (5.832236687577879e-23, 7)]
+Current state =  2 , Transition:  [(0.995073411233148, 7), (0.004926588765570403, 2), (1.2844117299619646e-12, 3), (2.3702872457924766e-19, 4), (9.396984287755594e-28, 1)]
+Current state =  3 , Transition:  [(0.5922772089504701, 4), (0.27629844462823133, 6), (0.11631422112171481, 2), (0.015110125298259424, 3), (1.3305735625014196e-12, 7)]
+Current state =  4 , Transition:  [(0.7276395634227674, 1), (0.1444128392316758, 2), (0.11727474380227643, 3), (0.010672849801106719, 4), (3.742173126009085e-09, 7)]
+Current state =  5 , Transition:  [(0.9999999956101945, 1), (4.3621349441205686e-09, 3), (2.7669913973689794e-11, 0), (2.5383501325801885e-23, 6), (1.5405800089205863e-23, 4)]
+Current state =  6 , Transition:  [(0.6907095198380303, 3), (0.3092904800828293, 0), (7.91416870759227e-11, 7), (4.479828350946491e-28, 2), (4.96494891462669e-29, 4)]
+Current state =  7 , Transition:  [(0.492095795626232, 4), (0.413302453337341, 2), (0.09428067456581937, 0), (0.0003210763009724472, 3), (1.6528735791090075e-10, 7)]
+
+5.
+Current number of hidden states =  10
+Current iteration times =  50
+
++++++++++ Current Poem Start! ++++++++
+worst to but difference hence thou my wit
+to once saw that gift i slanderers well
+self thy knowing and flatter all even writ
+up chose motion have is brass debate tell
+what like show the to twofold bett'ring is
+art pebbled find if when then is mine sake
+bright and father do let my drawn praise this
+as and in worms in that number wail make
+show am but stone as of the needs now thee
+tempting away can catch without quick prime
+long that enough bends as give drawn night me
+my grows it to only i these of time
+sweets and and upon have and sightless worth
+were graces despising methinks the forth.
++++++++++ Current Poem End! ++++++++++
+
+O_mat:
+///State =  0 , top N prob obs:  ['love', 'thee', 'heart', 'the', 'verse', 'eyes', 'me', 'time', 'world', 'her', 'good', 'some', 'blood', 'now', 'sun'] ///
+///State =  1 , top N prob obs:  ['sight', 'days', 'state', 'might', 'name', 'show', 'away', 'brow', 'self', 'own', 'part', 'heart', 'mind', 'rhyme', 'face'] ///
+///State =  2 , top N prob obs:  ['thee', 'me', 'one', 'die', 'lie', 'decay', 'tell', 'write', 'thought', 'youth', 'you', 'stand', 'dwell', 'loss', 'new'] ///
+///State =  3 , top N prob obs:  ['to', 'in', 'i', 'with', 'of', 'thou', 'and', 'for', 'from', 'doth', 'by', 'on', 'a', 'is', 'all'] ///
+///State =  4 , top N prob obs:  ['is', 'so', 'are', 'eye', 'or', 'true', 'it', 'lies', 'time', 'pride', 'great', 'mine', 'being', 'dead', 'most'] ///
+///State =  5 , top N prob obs:  ['the', 'my', 'me', 'thy', 'of', 'be', 'have', 'his', 'this', 'her', 'art', 'all', 'your', 'thee', 'am'] ///
+///State =  6 , top N prob obs:  ['and', 'that', 'i', 'which', 'when', 'you', 'but', 'for', 'not', 'if', 'do', 'is', 'he', 'are', 'so'] ///
+///State =  7 , top N prob obs:  ['my', 'thy', 'of', 'his', 'be', 'a', 'your', 'their', 'this', "love's", 'thee', 'mine', 'all', 'did', 'not'] ///
+///State =  8 , top N prob obs:  ['so', 'that', 'love', 'those', 'being', 'how', 'time', 'thee', 'day', 'night', 'alone', 'too', 'fair', 'praise', 'eyes'] ///
+///State =  9 , top N prob obs:  ['the', 'not', 'but', 'as', 'self', 'no', 'thy', 'love', 'it', 'a', 'or', 'then', 'o', 'sweet', 'thou'] ///
+
+A_mat:
+Current state =  0 , Transition:  [(0.9685186563967138, 5), (0.03148134360304002, 7), (2.432985197849856e-13, 9), (1.9058419856159365e-15, 3), (8.745941890298031e-16, 6)]
+Current state =  1 , Transition:  [(0.9999999986378094, 7), (1.3621897283172754e-09, 5), (7.251929100746729e-18, 9), (4.479968967380662e-18, 0), (1.2705835427864936e-22, 6)]
+Current state =  2 , Transition:  [(0.7764568606525877, 3), (0.2235431332032501, 1), (6.080736602618564e-09, 9), (4.961111542328218e-11, 6), (1.381372519992828e-11, 2)]
+Current state =  3 , Transition:  [(0.47194662660598763, 6), (0.2467407929471876, 9), (0.1652940985672725, 0), (0.10770597173412906, 2), (0.008312501816197658, 3)]
+Current state =  4 , Transition:  [(0.5061798083105757, 4), (0.27026844744933154, 7), (0.2235514746749258, 0), (2.693157217747557e-07, 8), (1.5960214005264993e-10, 9)]
+Current state =  5 , Transition:  [(0.9338755027028118, 3), (0.03137376601729051, 1), (0.020046546260256533, 9), (0.014668284161900243, 6), (3.585955877203899e-05, 5)]
+Current state =  6 , Transition:  [(0.521978381171959, 6), (0.3849211201487194, 8), (0.0894787570028891, 4), (0.0036170654496986703, 9), (4.659964244544966e-06, 5)]
+Current state =  7 , Transition:  [(0.6284264789186224, 3), (0.30889465040576647, 7), (0.043253232121396736, 9), (0.011130307871584076, 1), (0.0038172213239814384, 0)]
+Current state =  8 , Transition:  [(0.5260612318822743, 9), (0.392260272065487, 5), (0.08098011808388164, 3), (0.0004911086391766017, 6), (0.00020258753590045298, 2)]
+Current state =  9 , Transition:  [(0.5718645123035349, 9), (0.42767134908785587, 5), (0.00046391402326538696, 6), (1.9551346556808298e-07, 7), (2.6108113013568287e-08, 4)]
+
+6.
+Current number of hidden states =  10
+Current iteration times =  100
+
++++++++++ Current Poem Start! ++++++++
+impeached since happy wand'rest greatest book
+mother's heart that not on for thou i none
+is base their heart more looks make lover's look
+of in in music many truth you one
+aye was i do almost 'gainst others wide
+where can you in her of our should praise sake
+with thee dost leave follows own being belied
+our and with knows loves your thy face be make
+verse would i that thy brief worthy thou do
+never the love whence i breast appear that loss
+that how to i for in the goddess too
+as that to to how i when in youth dross
+smell dost greet age of my place that hast were
+want and region with duteous self shall bear.
++++++++++ Current Poem End! ++++++++++
+
+O_mat:
+///State =  0 , top N prob obs:  ['thy', 'my', 'which', 'a', 'love', 'your', 'thee', 'the', 'this', 'more', 'sweet', 'mine', 'thine', 'time', 'their'] ///
+///State =  1 , top N prob obs:  ['the', 'of', 'my', 'in', 'that', 'and', 'with', 'his', 'by', 'thy', 'all', 'on', 'your', 'for', 'no'] ///
+///State =  2 , top N prob obs:  ['art', 'live', 'with', 'thee', 'use', 'eye', 'thou', 'away', 'bear', 'tell', 'lie', 'stay', 'stand', 'time', 'within'] ///
+///State =  3 , top N prob obs:  ['in', 'and', 'thee', 'me', 'all', 'day', 'from', 'one', 'than', 'against', 'still', 'which', 'beauty', 'made', 'more'] ///
+///State =  4 , top N prob obs:  ['and', 'love', 'that', 'is', 'heart', 'which', 'eyes', 'self', 'or', 'even', 'than', 'will', 'are', 'hath', 'eye'] ///
+///State =  5 , top N prob obs:  ['thou', 'to', 'doth', 'me', 'it', 'self', 'so', 'as', 'dost', 'not', 'art', 'mine', 'shall', 'love', 'thy'] ///
+///State =  6 , top N prob obs:  ['i', 'to', 'but', 'and', 'not', 'for', 'is', 'that', 'when', 'so', 'you', 'me', 'it', 'then', 'in'] ///
+///State =  7 , top N prob obs:  ['be', 'are', 'thee', 'gone', 'me', 'more', 'face', 'end', 'best', 'spent', 'thought', 'free', 'scope', 'bad', 'lend'] ///
+///State =  8 , top N prob obs:  ['a', 'is', 'be', 'with', 'some', 'thee', 'being', 'have', 'i', 'do', 'are', 'so', 'can', 'shall', 'an'] ///
+///State =  9 , top N prob obs:  ['sight', 'days', 'night', 'pride', 'state', 'brow', 'way', 'light', 'rhyme', 'skill', 'decay', 'woe', 'delight', 'store', 'show'] ///
+
+A_mat:
+Current state =  0 , Transition:  [(0.8525854349087103, 1), (0.13243151879022946, 4), (0.01498261916019615, 7), (4.2714086513236617e-07, 6), (8.111735537124379e-16, 0)]
+Current state =  1 , Transition:  [(0.4457405851102127, 3), (0.4400431980201982, 6), (0.09112393242132344, 2), (0.01828593494920147, 1), (0.004806349499063394, 4)]
+Current state =  2 , Transition:  [(0.9999999999999756, 5), (2.159489996150701e-14, 7), (3.1705235851112564e-15, 6), (2.083925574010083e-18, 8), (1.395849203016381e-27, 4)]
+Current state =  3 , Transition:  [(0.5646547492335985, 1), (0.3320262586829162, 8), (0.07991170344711566, 3), (0.02340728863636916, 0), (2.803498601872023e-23, 6)]
+Current state =  4 , Transition:  [(0.7962593518767286, 0), (0.20362559265401967, 1), (0.00011505546925334509, 3), (1.9245383453733427e-19, 4), (2.983904552575426e-26, 5)]
+Current state =  5 , Transition:  [(0.6254143502060439, 5), (0.3596320395923505, 0), (0.014894638313824234, 6), (5.886233819456077e-05, 8), (9.324858656270721e-08, 1)]
+Current state =  6 , Transition:  [(0.7662114827844985, 6), (0.19882576233002003, 4), (0.03172968544856385, 7), (0.0032330694369160093, 5), (1.8597148514895096e-23, 8)]
+Current state =  7 , Transition:  [(1.0, 8), (3.3310021506910094e-23, 6), (4.829523965068723e-29, 7), (2.7423337644183418e-36, 1), (2.806000236307637e-40, 3)]
+Current state =  8 , Transition:  [(0.5272324976727593, 6), (0.45137819662036527, 0), (0.018820606717571377, 5), (0.0025686989893050093, 2), (3.1891996175424727e-19, 4)]
+Current state =  9 , Transition:  [(0.5386100315589643, 0), (0.26162985174061176, 1), (0.19976011670042232, 7), (5.2409916468928834e-40, 6), (1.5716993684622494e-44, 8)]
+
+7.
+Current number of hidden states =  5
+Current iteration times =  150
+
++++++++++ Current Poem Start! ++++++++
+make virtue that in of hardest depart
+in me draw well on words i sight new-fired
+do save pride not alter and eye thy heart
+therefore is dust stealth is in desired
+looking that's in i see is pattern it
+in is gentle brood to uttering o cheeks
+for love's live it is her we give heart it
+ten though with three losses a store of weeks
+persuade sweets askance thy yea love his looks
+issue and eyes hunted upon dear heaven
+hath due thou woe the give such advised hooks
+and so steal my spirit my truly even
+false in i have and art thy and my rest
+lived have yet me no if the heavenly west.
++++++++++ Current Poem End! ++++++++++
+
+O_mat:
+///State =  0 , top N prob obs:  ['be', 'thee', 'me', 'thy', 'self', 'more', 'your', 'heart', 'so', 'you', 'doth', 'true', 'own', 'their', 'art'] ///
+///State =  1 , top N prob obs:  ['with', 'sight', 'away', 'days', 'are', 'out', 'alone', 'thus', 'dead', 'day', 'age', 'end', 'pride', 'show', 'pen'] ///
+///State =  2 , top N prob obs:  ['i', 'and', 'that', 'but', 'to', 'thou', 'not', 'so', 'you', 'in', 'as', 'for', 'me', 'do', 'a'] ///
+///State =  3 , top N prob obs:  ['my', 'the', 'of', 'and', 'to', 'thy', 'is', 'that', 'thou', 'his', 'a', 'with', 'it', 'doth', 'i'] ///
+///State =  4 , top N prob obs:  ['in', 'love', 'all', 'for', 'with', 'from', 'self', 'that', 'be', 'time', 'the', 'when', 'beauty', 'which', 'eye'] ///
+
+A_mat:
+Current state =  0 , Transition:  [(0.9926620382237936, 3), (0.007337961776205242, 2), (9.940978143127267e-28, 0), (4.9479803038685e-34, 4), (4.638493176096197e-74, 1)]
+Current state =  1 , Transition:  [(0.9687281185837222, 0), (0.03127188141627734, 1), (4.2734149398364867e-29, 3), (1.7777346470889933e-40, 2), (7.029806031893578e-45, 4)]
+Current state =  2 , Transition:  [(0.959622227877831, 2), (0.01768781190699147, 3), (0.016139517430794212, 0), (0.006550440716526314, 1), (2.0678538543675807e-09, 4)]
+Current state =  3 , Transition:  [(0.7252620094859007, 4), (0.22929009225405514, 3), (0.04543983757454623, 1), (8.060685501718815e-06, 2), (1.9428566669382247e-38, 0)]
+Current state =  4 , Transition:  [(0.6937858501180479, 3), (0.3062141498818463, 2), (1.104348395551564e-13, 4), (5.7395794077667265e-30, 0), (2.4306185282749025e-36, 1)]
+
+8.
+Current number of hidden states =  8
+Current iteration times =  150
++++++++++ Current Poem Start! ++++++++
+wooed if i to be say then you what mend
+what by thy forth to hearts gilded deceive
+any picture eyes wrong from eisel show tend
+my most y'have injurious signs then be leave
+to abundance ill-wresting aside stained
+all thrice slave should beauty i soil were is
+glory thou my slave might divining reigned
+the trophies be in a spirit is this
+nothing for but live to love of but your will
+mightst belied not at trust him then or fire
+of measure of found it when dear will still
+this man they expense this mine the desire
+hope yet so it once i prophecies sits
+mine full pierced thievish love some her commits.
++++++++++ Current Poem End! ++++++++++
+
+O_mat:
+///State =  0 , top N prob obs:  ['in', 'thee', 'all', 'thou', 'with', 'that', 'you', 'be', 'on', 'me', 'for', 'make', 'mine', 'art', 'this'] ///
+///State =  1 , top N prob obs:  ['to', 'and', 'of', 'in', 'thou', 'that', 'is', 'from', 'when', 'as', 'for', 'doth', 'by', 'with', 'shall'] ///
+///State =  2 , top N prob obs:  ['be', 'doth', 'to', 'is', 'self', 'are', 'did', 'can', 'thee', 'do', 'true', 'not', 'one', 'hand', 'more'] ///
+///State =  3 , top N prob obs:  ['day', 'night', 'might', 'sight', 'mind', 'days', 'will', 'brow', 'state', 'store', 'face', 'skill', 'part', 'show', 'self'] ///
+///State =  4 , top N prob obs:  ['and', 'but', 'i', 'not', 'that', 'so', 'which', 'me', 'it', 'thee', 'for', 'or', 'are', 'then', 'if'] ///
+///State =  5 , top N prob obs:  ['love', 'self', 'heart', 'beauty', 'time', 'am', 'sweet', 'world', 'fair', 'more', 'have', 'life', 'praise', 'one', 'worth'] ///
+///State =  6 , top N prob obs:  ['lie', 'prove', 'eyes', 'new', 'sight', 'alone', 'decay', 'end', 'tell', 'woe', 'spend', 'lies', 'dwell', 'gone', 'spent'] ///
+///State =  7 , top N prob obs:  ['the', 'my', 'thy', 'i', 'a', 'his', 'your', 'of', 'their', 'this', 'in', 'no', 'and', 'me', 'her'] ///
+
+A_mat:
+Current state =  0 , Transition:  [(0.9014230453740145, 1), (0.09857695462598161, 0), (3.78787048410014e-15, 4), (3.7608006256877124e-41, 5), (3.3645374138141343e-49, 7)]
+Current state =  1 , Transition:  [(0.49933331681960313, 4), (0.498300220732155, 5), (0.0019678785497386454, 0), (0.000398583898505556, 6), (1.5967882249240222e-18, 1)]
+Current state =  2 , Transition:  [(0.4142516669329875, 7), (0.27027094155148007, 5), (0.15887662550845552, 4), (0.15660076600707817, 1), (6.0427606223293e-18, 0)]
+Current state =  3 , Transition:  [(0.9981850033266759, 7), (0.0018149966733246937, 2), (1.541782356359002e-45, 0), (4.311531118527328e-65, 1), (4.154971530767735e-67, 4)]
+Current state =  4 , Transition:  [(0.652287882660622, 4), (0.2331988412409226, 0), (0.10982126877105032, 5), (0.00469200732740303, 1), (2.750698454018516e-39, 2)]
+Current state =  5 , Transition:  [(0.9255758762407226, 7), (0.0744241237592803, 1), (7.563177918866522e-24, 2), (7.234393643284249e-32, 5), (5.928440461307761e-35, 4)]
+Current state =  6 , Transition:  [(0.9999999999999997, 2), (6.422762087308388e-16, 1), (1.173618292692523e-45, 0), (2.8718167634605044e-46, 4), (1.5769473714653052e-51, 5)]
+Current state =  7 , Transition:  [(0.4866972014730682, 1), (0.36955171241336027, 0), (0.10083183796832206, 3), (0.04291924804341629, 7), (1.0183231792872477e-10, 4)]
+
+9.
+Current number of hidden states =  10
+Current iteration times =  150
+
++++++++++ Current Poem Start! ++++++++
+their truth being wanton thou i one things
+of my contented had least to bevel
+be and by thought happy what me known kings
+in it worms did love down-rased be level
+and and thence upon dull that is i on
+above are poet child how that lov'st all
+praises thy knife thy all doth thee the groan
+with as and what see ills neither if call
+beauty of hell that thou day cheered this be
+day this do dost each world you art mine state
+of see seemed a great excuse here's of me
+age in the still for him of heart translate
+birds mine as it thou twofold invocate
+false their love thy that had in this since date.
++++++++++ Current Poem End! ++++++++++
+
+O_mat:
+///State =  0 , top N prob obs:  ['and', 'which', 'that', 'or', 'if', 'but', 'love', 'when', 'than', 'o', 'time', 'how', 'world', 'though', 'then'] ///
+///State =  1 , top N prob obs:  ['part', 'woe', 'pride', 'skill', 'days', 'delight', 'face', 'day', 'eyes', 'spend', 'view', 'wrong', 'pen', 'rhyme', 'prove'] ///
+///State =  2 , top N prob obs:  ['of', 'i', 'thou', 'to', 'in', 'that', 'and', 'is', 'for', 'by', 'do', 'with', 'can', 'all', 'they'] ///
+///State =  3 , top N prob obs:  ['not', 'with', 'that', 'as', 'thee', 'so', 'in', 'when', 'for', 'you', 'thou', 'on', 'now', 'what', 'but'] ///
+///State =  4 , top N prob obs:  ['i', 'in', 'not', 'all', 'me', 'you', 'mine', 'thee', 'art', 'of', 'it', 'have', 'love', 'but', 'for'] ///
+///State =  5 , top N prob obs:  ['away', 'night', 'alone', 'still', 'light', 'sight', 'spent', 'respect', 'behind', 'strange', 'seen', 'eye', 'prove', 'remain', 'fight'] ///
+///State =  6 , top N prob obs:  ['my', 'thy', 'to', 'the', 'of', 'a', 'his', 'your', 'with', 'in', 'doth', 'their', 'is', 'no', 'this'] ///
+///State =  7 , top N prob obs:  ['thee', 'me', 'sight', 'heart', 'end', 'might', 'mind', 'pleasure', 'lie', 'state', 'sake', 'name', 'place', 'store', 'stand'] ///
+///State =  8 , top N prob obs:  ['the', 'a', 'that', 'but', 'be', 'sweet', 'love', 'more', 'thy', 'no', 'this', 'so', 'or', 'thee', 'me'] ///
+///State =  9 , top N prob obs:  ['self', 'be', 'love', 'thee', 'me', 'heart', 'true', 'fair', 'will', 'show', 'give', 'thine', 'verse', 'worth', 'days'] ///
+
+A_mat:
+Current state =  0 , Transition:  [(0.999380399238431, 8), (0.0006127435130910523, 2), (6.857248479411713e-06, 6), (5.511437015438081e-23, 3), (2.6669400936133465e-25, 0)]
+Current state =  1 , Transition:  [(0.6648196979369384, 8), (0.20091484533517262, 6), (0.1342654567278883, 3), (9.999213261913418e-17, 2), (2.472527161477094e-42, 4)]
+Current state =  2 , Transition:  [(0.7463608358331287, 0), (0.21676050878196212, 3), (0.019254532919676097, 7), (0.012293317542402257, 4), (0.005330804529836996, 9)]
+Current state =  3 , Transition:  [(0.9297178211336686, 4), (0.060065142300036435, 7), (0.010217036566297745, 2), (9.292406898017086e-18, 3), (5.481123965611505e-23, 0)]
+Current state =  4 , Transition:  [(0.8352855368410372, 2), (0.09947954188209866, 4), (0.0489891810271361, 3), (0.01624574024972711, 9), (6.362211412417608e-19, 0)]
+Current state =  5 , Transition:  [(0.7274894869680261, 9), (0.2179511433445704, 2), (0.054559369687403575, 7), (2.3262694977475562e-43, 4), (6.373545966985018e-65, 0)]
+Current state =  6 , Transition:  [(0.34167058156331176, 2), (0.27295169222509497, 3), (0.16952058713360044, 4), (0.14695096258214194, 9), (0.06846055796769873, 0)]
+Current state =  7 , Transition:  [(0.8577853845406802, 6), (0.14221461545932038, 9), (8.783918879692627e-17, 1), (1.6513952505123015e-46, 2), (1.68063922076114e-61, 4)]
+Current state =  8 , Transition:  [(0.5586440642694303, 6), (0.13366213828957665, 9), (0.11798680302902136, 4), (0.09607010208802638, 2), (0.0832586838732955, 3)]
+Current state =  9 , Transition:  [(0.9738611785879935, 6), (0.02613882140469267, 8), (7.31344298753843e-12, 2), (3.080379994050618e-29, 9), (8.853514314457243e-44, 3)]
+
