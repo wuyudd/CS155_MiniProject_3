@@ -85,6 +85,8 @@ def get_rhyme_dict_spenser(filename):
 	return rhyme_dict
 
 def combine_sha_spen_rhyme_dict(sha_rhyme_dict, spen_rhyme_dict):
+	# still need to fix
+	# dictionary merge?
 	comebine_rhyme_dict = {}
 	for key_spen, value_spen in spen_rhyme_dict.items():
 		if key_spen in sha_rhyme_dict.keys():
