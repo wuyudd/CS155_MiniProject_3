@@ -29,8 +29,8 @@ def read_in_poems_sepnser(filename):
 				count += 1
 				if count == 2: # this poem ends
 					poems.append(new_poem)
-				new_poem = []
-				count = 0
+					new_poem = []
+					count = 0
 			else:
 				new_poem.append(line)
 	return poems
@@ -78,6 +78,7 @@ def get_rhyme_dict(filename):
 
 def get_rhyme_dict_spenser(filename):
 	poems = read_in_poems_sepnser(filename)
+	print(poems[0])
 	all_poems_last_words = get_last_word(poems)
 	rhyme_dict = build_rhyme_dict(all_poems_last_words)
 
@@ -104,11 +105,12 @@ def combine_sha_spen_rhyme_dict(sha_rhyme_dict, spen_rhyme_dict):
 	return comebine_rhyme_dict
 
 if __name__ == '__main__':
-	filename = "./project3/data/shakespeare.txt"
+	filename = "./project3/data/spenser.txt"
 	poems = read_in_poems_sepnser(filename)
 	#print(poems[0])
+
 	all_poems_last_words = get_last_word(poems)
 	#print(all_poems_last_words[0])
 	rhyme_dict = build_rhyme_dict(all_poems_last_words)
-	print(rhyme_dict)
+	print("len of rhyme_dict: ", len(rhyme_dict))
 	
