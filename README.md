@@ -1,5 +1,7 @@
 # CS155_MiniProject_3
 
+// Created and Modified by Yu Wu.
+
 This is MiniProject_3 for CS 155, Caltech.
 
 Group Member: Haotian Sheng, Sha Sha, Yu Wu.
